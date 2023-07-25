@@ -1,4 +1,4 @@
-package org.example;
+package org.example.subscriber;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.broker.BrokerService;
@@ -11,7 +11,7 @@ import javax.naming.NamingException;
 
 public class Subscriber {
     public  static final String BROKER_URL = "tcp://localhost:61616";
-    public static final String DESTINATION = "myTopic";
+    public static final String DESTINATION = "targetTopic";
 
     public static void main( String[] args ) throws Exception {
         Connection connection = null;
@@ -32,28 +32,35 @@ public class Subscriber {
 
             Destination destination = session.createTopic(DESTINATION);
 
-            Destination destination1 = session.createTopic("filter/myTopic");
-
-            messageConsumer = session.createConsumer(destination);
+            //messageConsumer = session.createConsumer(destination);
             //destination, property = 'value', noLocal
-            MessageConsumer messageConsumer1 = session.createConsumer(destination1, "someID=1", false);
-            MessageConsumer messageConsumer2 = session.createConsumer(destination, "someID=2", false);
-
-
-
+            MessageConsumer messageConsumer1 = session.createConsumer(destination, "messageContent='someID'", false);
+            MessageConsumer messageConsumer2 = session.createConsumer(destination, "messageContent='some'", false);
 
             connection.start();
 
-           while (true){
-               Message msg = messageConsumer.receive();
-               Message msg1 = messageConsumer1.receive();
-               Message msg2 = messageConsumer2.receive();
-               //System.out.println(msg.getJMSDestination());//topic://myTopic
+            System.out.println("*************************************************************");
+            System.out.println("MessageConsumer1 will only receive messages where messageContent='someID'");
+            for (;;) {
+                TextMessage messageReceivedA = (TextMessage) messageConsumer1.receive();
+                if (messageReceivedA == null) {
+                    break;
+                }
+                System.out.println("*****************"+messageConsumer1.getMessageSelector());
 
-               if (msg instanceof TextMessage){
-                   String message = ((TextMessage)msg).getText();
-                   System.out.println("The Received messages: " + message);
-               }
+                System.out.println("messageConsumer1 received ");
+            }
+
+            // Step 13. Consume the messages from MessageConsumer2, filtering out someID=2
+            System.out.println("*************************************************************");
+            System.out.println("MessageConsumer2 will only receive messages where messageContent='some'");
+            for (;;) {
+                TextMessage messageReceivedB = (TextMessage) messageConsumer2.receive();
+                if (messageReceivedB == null) {
+                    break;
+                }
+
+                System.out.println("messageConsumer2 received ");
             }
 
         } finally {

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.publisher;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import javax.jms.*;
@@ -7,7 +7,7 @@ import javax.jms.*;
 public class Publisher
 {
     public  static final String BROKER_URL = "tcp://localhost:61616";
-    public static final String DESTINATION = "myTopic";
+    public static final String DESTINATION = "targetTopic";
 
     public static void main( String[] args ) {
         Connection connection = null;
@@ -24,17 +24,23 @@ public class Publisher
 
 
             Destination destination = session.createTopic(DESTINATION);
-            Destination destination1 = session.createTopic("filter/myTopic");
+            //Destination destination1 = session.createTopic("targetTopic");
 
             messageProducer = session.createProducer(destination);
-            messageProducer1 = session.createProducer(destination1);
+            messageProducer1 = session.createProducer(destination);
 
-            TextMessage msg = session.createTextMessage("someI");
+            TextMessage msg = session.createTextMessage("***********SOMEID MESSAES***********");
+            TextMessage msg1 = session.createTextMessage("***********NOID MESSAGES***********");
+            msg.setStringProperty("messageContent", "someID");
+            msg1.setStringProperty("messageContent", "noID");
+
 
             for(int i=0; i<10; i++){
+
                 messageProducer.send(msg);
-                messageProducer1.send(msg);
-                System.out.println("Sent message: " + msg.getText());
+                System.out.println("Sent message: " + msg.getText()+"the message property is: ****"+ msg.getStringProperty("messageContent"));
+                messageProducer1.send(msg1);
+                System.out.println("Sent message: " + msg1.getText()+"the message property is: ****"+ msg1.getStringProperty("messageContent"));
 
                 Thread.sleep(1000);
             }

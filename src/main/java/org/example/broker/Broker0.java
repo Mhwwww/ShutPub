@@ -1,4 +1,4 @@
-package org.example;
+package org.example.broker;
 
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;

@@ -1,16 +1,14 @@
-package org.example;
+package org.example.publisher;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
-import org.apache.activemq.artemis.selector.filter.*;
+import org.apache.activemq.command.ActiveMQDestination;
 
 import javax.jms.*;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicReference;
 
-import static org.example.PublisherWithPSF.BROKER_URL;
-import static org.example.PublisherWithPSF.DESTINATION;
+import static org.example.publisher.PublisherWithPSF.BROKER_URL;
+import static org.example.publisher.PublisherWithPSF.DESTINATION;
 
 
 public class PsfMW {
@@ -22,34 +20,37 @@ public class PsfMW {
     // Map to store AtomicReferences for each producer's threshold
     //private Map<MessageProducer, AtomicReference<Message>> producerThresholdMap = new HashMap<>();
     private AtomicReference<String> threshold = new AtomicReference<>(null);
-    private String currentThreshold = null;
+    private String currentSelector = null;
     public void subToFilter(MessageProducer producer) {
         // 2. send messages when there is no threshold from filter topic
         // 3. filter messages when there is a threshold
         try {
-            Destination pubDestination = producer.getDestination();
-            //System.out.println(pubDestination.toString().replace("topic://", ""));
-            String fiterDestination = "filter/" + pubDestination.toString().replace("topic://", "");
-            //.out.println("the filter destination is: " + fiterDestination);
+            ActiveMQDestination pubDestination = ActiveMQDestination.transform(producer.getDestination());
 
+            String fiterDestination = "filter/" + pubDestination.getPhysicalName();
+            System.out.println(fiterDestination);
+
+            // create filter subscriber
             ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(BROKER_URL);
             Connection filterConn = activeMQConnectionFactory.createConnection();
             Session filterSession = filterConn.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
             Destination filterTopic = filterSession.createTopic(fiterDestination);
-
             MessageConsumer filterSubscriber = filterSession.createConsumer(filterTopic);
             //MessageListener listener = new ActiveMQRAMessageListener();
             filterConn.start();
 
+            //TODO: map filterTopic with currentThreshold
             filterSubscriber.setMessageListener(message1 -> {
                 // Handle incoming messages here
                 if ( message1 != null && message1 instanceof TextMessage) {
-                    System.out.println("we got the threshold");
+                    //System.out.println("we got the threshold");
                     try {
                         String result = ((TextMessage) message1).getText();
-                        if (!Objects.equals(currentThreshold, result)){
-                            System.out.println("Threshold changed. New threshold: " + result);
-                            currentThreshold = result;
+                        System.out.println("we got the threshold" +result);
+
+                        if (!Objects.equals(currentSelector, result)){
+                            System.out.println("Threshold changed, New threshold is: " + result);
+                            currentSelector = result;
                         }else {
                             System.out.println("No changes in threshold");
                         }
@@ -70,27 +71,38 @@ public class PsfMW {
 /*
 * middleware publisher
 * */
-    public void fiter(Message msg){
+    public void fiter(TextMessage msg){
         // using currentThreshold for the incoming messages
+
+
+
+
         ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(BROKER_URL);
         try {
             Connection publishConn = activeMQConnectionFactory.createConnection();
             Session pubSession = publishConn.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
 
             MessageProducer mwProducer = pubSession.createProducer(pubSession.createTopic(DESTINATION));
+
+
             //TODO: 1. if the threshold does not change, then use the currentThreshold
-            if( currentThreshold == null){
+            if( currentSelector == null){
                 mwProducer.send(msg);
-
                 System.out.println("no threshold, and just send messages to broker");
+
             }else {
+                /* currentSelector = {messageContent=some}*/
+                String[] result = currentSelector.substring(1, currentSelector.length()-1).split("=");
+                String property = result[0];
+                String constraints = result[1];
 
-
-                if (msg.toString().contains(currentThreshold)) {
-                    //TODO: 2. if msg passed the threshold, then send.
+                if( msg.propertyExists(property) && msg.getStringProperty(property).contains(constraints)){
                     mwProducer.send(msg);
-                    System.out.println("The sent message is: " + msg.toString()+ ", it passed the threshold, and the currentThreshold is:"+currentThreshold);
+
+                    System.out.println("Actual Sent Message is: " + msg.getText()+ " , the message property is: "+ msg.getStringProperty(property)+ ", it passed the threshold, and the currentThreshold is:"+ currentSelector);
+
                 }
+
             }
 
         } catch (JMSException e) {

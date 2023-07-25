@@ -1,4 +1,4 @@
-package org.example;
+package org.example.broker;
 
 import org.apache.activemq.artemis.api.core.TransportConfiguration;
 import org.apache.activemq.artemis.core.config.Configuration;
