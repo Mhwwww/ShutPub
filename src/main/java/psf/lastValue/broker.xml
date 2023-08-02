@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!--<configuration xmlns="urn:activemq" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:activemq /schema/artemis-configuration.xsd">-->
+<!--   <core xmlns="urn:activemq:core">-->
+
+<configuration xmlns="urn:activemq"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:xi="http://www.w3.org/2001/XInclude"
+               xsi:schemaLocation="urn:activemq /schema/artemis-configuration.xsd">
+
+   <core xmlns="urn:activemq:core" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="urn:activemq:core ">
+
+      <bindings-directory>./data/messaging/bindings</bindings-directory>
+
+      <journal-directory>./data/messaging/journal</journal-directory>
+
+      <large-messages-directory>./data/messaging/largemessages</large-messages-directory>
+
+      <paging-directory>./data/messaging/paging</paging-directory>
+
+      <!-- Acceptors -->
+      <acceptors>
+         <acceptor name="netty-acceptor">tcp://localhost:61617</acceptor>
+      </acceptors>
+
+
+   </core>
+</configuration>

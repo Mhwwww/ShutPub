@@ -22,7 +22,7 @@ public class Broker1 {
         ActiveMQServer server = ActiveMQServers.newActiveMQServer(configuration);
         server.start();
 
-        System.out.println("Remote Broker started at: tcp://localhost:61617");
+        System.out.println("Remote LastValueBroker started at: tcp://localhost:61617");
 
         // Keep the remote broker running until the application is terminated
         while (true) {

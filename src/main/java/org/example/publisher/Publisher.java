@@ -1,6 +1,11 @@
 package org.example.publisher;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.artemis.api.core.QueueConfiguration;
+import org.apache.activemq.artemis.jms.server.config.TopicConfiguration;
+import org.apache.activemq.artemis.jms.server.config.impl.TopicConfigurationImpl;
+import org.w3c.dom.Text;
+
 import javax.jms.*;
 
 
@@ -23,14 +28,25 @@ public class Publisher
             //Message msg = session.createTextMessage("TESTING");
 
 
-            Destination destination = session.createTopic(DESTINATION);
+            //Destination destination = session.createTopic(DESTINATION);
+            Destination destination = session.createQueue(DESTINATION);
+
             //Destination destination1 = session.createTopic("targetTopic");
 
             messageProducer = session.createProducer(destination);
             messageProducer1 = session.createProducer(destination);
+//TODO: use queue configuration to create a queue
+            QueueConfiguration queueConfiguration = new QueueConfiguration();
+            queueConfiguration.setLastValue(Boolean.TRUE);
+
+
+
+
+
 
             TextMessage msg = session.createTextMessage("***********SOMEID MESSAES***********");
             TextMessage msg1 = session.createTextMessage("***********NOID MESSAGES***********");
+
             msg.setStringProperty("messageContent", "someID");
             msg1.setStringProperty("messageContent", "noID");
 
@@ -41,6 +57,7 @@ public class Publisher
                 System.out.println("Sent message: " + msg.getText()+"the message property is: ****"+ msg.getStringProperty("messageContent"));
                 messageProducer1.send(msg1);
                 System.out.println("Sent message: " + msg1.getText()+"the message property is: ****"+ msg1.getStringProperty("messageContent"));
+
 
                 Thread.sleep(1000);
             }

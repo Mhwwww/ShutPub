@@ -35,7 +35,9 @@ public class Subscriber {
             //messageConsumer = session.createConsumer(destination);
             //destination, property = 'value', noLocal
             MessageConsumer messageConsumer1 = session.createConsumer(destination, "messageContent='someID'", false);
+
             MessageConsumer messageConsumer2 = session.createConsumer(destination, "messageContent='some'", false);
+
 
             connection.start();
 
@@ -50,6 +52,10 @@ public class Subscriber {
 
                 System.out.println("messageConsumer1 received ");
             }
+
+
+
+
 
             // Step 13. Consume the messages from MessageConsumer2, filtering out someID=2
             System.out.println("*************************************************************");

@@ -32,7 +32,7 @@ public class Broker0 {
                     .setFilterString("name='abc'")
                     .setStaticConnectors(Collections.singletonList("tcp://localhost:61617"));
 
-            // 创建并配置本地 Broker
+            // 创建并配置本地 LastValueBroker
             Configuration configuration = new ConfigurationImpl()
                     .setPersistenceEnabled(false)
                     .setSecurityEnabled(false)
@@ -44,7 +44,7 @@ public class Broker0 {
             localBroker.start();
 
 
-            System.out.println("Local Broker started at: " + localBroker.getAddressInfo(SimpleString.toSimpleString(LOCAL_BROKER_URL)));
+            System.out.println("Local LastValueBroker started at: " + localBroker.getAddressInfo(SimpleString.toSimpleString(LOCAL_BROKER_URL)));
 
             Thread.sleep(2000);
 

@@ -26,10 +26,11 @@ public class PublisherWithPSF {
                 //TODO: 1. create a normal publisher, and 2. creat a publisher-side middleware
                 messageProducer = session.createProducer(destination);
 
+//                PsfMW mw = new PsfMW();
+//                mw.subToFilter(messageProducer, session, connection);
+
                 PsfMW mw = new PsfMW();
-                mw.subToFilter(messageProducer);
-
-
+                mw.subToFilter(messageProducer, session, connection);
 
                 for (int i = 1; i < 100; i++) {
                     for (int someID = 1; someID <= 2; someID++) {
@@ -44,10 +45,11 @@ public class PublisherWithPSF {
 
                         // Step 10.2 Send the message
                         //messageProducer.send(message1);
+
                         // TODO: let the middleware send messages, not the producer itself
                         //System.out.println("will send messages in the middleware");
-                        mw.fiter(message1);
-                        mw.fiter(message2);
+                        mw.fiter(messageProducer, message1);
+                        mw.fiter(messageProducer, message2);
                         Thread.sleep(2000);
 
                         System.out.println("Publisher Plan to Sent message: " + message1.getText()+ message1.getStringProperty("messageContent"));

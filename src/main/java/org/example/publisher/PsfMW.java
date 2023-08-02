@@ -21,9 +21,10 @@ public class PsfMW {
     //private Map<MessageProducer, AtomicReference<Message>> producerThresholdMap = new HashMap<>();
     private AtomicReference<String> threshold = new AtomicReference<>(null);
     private String currentSelector = null;
-    public void subToFilter(MessageProducer producer) {
+    public void subToFilter(MessageProducer producer, Session session,Connection connection) {
         // 2. send messages when there is no threshold from filter topic
         // 3. filter messages when there is a threshold
+
         try {
             ActiveMQDestination pubDestination = ActiveMQDestination.transform(producer.getDestination());
 
@@ -31,13 +32,19 @@ public class PsfMW {
             System.out.println(fiterDestination);
 
             // create filter subscriber
-            ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(BROKER_URL);
-            Connection filterConn = activeMQConnectionFactory.createConnection();
-            Session filterSession = filterConn.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
-            Destination filterTopic = filterSession.createTopic(fiterDestination);
-            MessageConsumer filterSubscriber = filterSession.createConsumer(filterTopic);
+//            ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(BROKER_URL);
+//            Connection filterConn = activeMQConnectionFactory.createConnection();
+//            filterConn.setClientID(fiterDestination);
+//            Session filterSession = filterConn.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
+            //Destination filterTopic = filterSession.createTopic(fiterDestination);
+            Topic filterTopic = session.createTopic(fiterDestination);
+
+            //TopicSubscriber filterSubscriber = session.createDurableSubscriber(filterTopic, fiterDestination);
+
+
+            MessageConsumer filterSubscriber = session.createConsumer(filterTopic);
             //MessageListener listener = new ActiveMQRAMessageListener();
-            filterConn.start();
+            connection.start();
 
             //TODO: map filterTopic with currentThreshold
             filterSubscriber.setMessageListener(message1 -> {
@@ -71,23 +78,22 @@ public class PsfMW {
 /*
 * middleware publisher
 * */
-    public void fiter(TextMessage msg){
+
+    //TODO: use the publisher session, do not initialize for filter and subscriber separately
+    public void fiter(MessageProducer producer, TextMessage msg){
         // using currentThreshold for the incoming messages
 
-
-
-
-        ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(BROKER_URL);
+//        ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(BROKER_URL);
         try {
-            Connection publishConn = activeMQConnectionFactory.createConnection();
-            Session pubSession = publishConn.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
-
-            MessageProducer mwProducer = pubSession.createProducer(pubSession.createTopic(DESTINATION));
+//            Connection publishConn = activeMQConnectionFactory.createConnection();
+//            Session pubSession = publishConn.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
+//
+//            MessageProducer mwProducer = pubSession.createProducer(pubSession.createTopic(DESTINATION));
 
 
             //TODO: 1. if the threshold does not change, then use the currentThreshold
             if( currentSelector == null){
-                mwProducer.send(msg);
+                producer.send(msg);
                 System.out.println("no threshold, and just send messages to broker");
 
             }else {
@@ -97,7 +103,7 @@ public class PsfMW {
                 String constraints = result[1];
 
                 if( msg.propertyExists(property) && msg.getStringProperty(property).contains(constraints)){
-                    mwProducer.send(msg);
+                    producer.send(msg);
 
                     System.out.println("Actual Sent Message is: " + msg.getText()+ " , the message property is: "+ msg.getStringProperty(property)+ ", it passed the threshold, and the currentThreshold is:"+ currentSelector);
 
