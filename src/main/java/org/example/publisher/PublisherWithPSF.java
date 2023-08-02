@@ -19,6 +19,7 @@ public class PublisherWithPSF {
             ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(BROKER_URL);
             try{
                 connection = activeMQConnectionFactory.createConnection();
+                connection.setClientID("filter/"+DESTINATION);
                 session = connection.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
                 Destination destination = session.createTopic(DESTINATION);
                 //Message msg = session.createTextMessage("TESTING");
@@ -30,7 +31,9 @@ public class PublisherWithPSF {
 //                mw.subToFilter(messageProducer, session, connection);
 
                 PsfMW mw = new PsfMW();
-                mw.subToFilter(messageProducer, session, connection);
+                //mw.subToFilter(messageProducer);
+
+                mw.subToFilter(messageProducer,session,connection);
 
                 for (int i = 1; i < 100; i++) {
                     for (int someID = 1; someID <= 2; someID++) {

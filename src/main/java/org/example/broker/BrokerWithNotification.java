@@ -28,7 +28,7 @@ public class BrokerWithNotification {
 
     public static void main(String[] args) {
         BrokerService broker = new BrokerService();
-        broker.setPersistent(false);
+        broker.setPersistent(true);
 
 
         InferenceEngine inferenceEngine = new InferenceEngine();
@@ -47,13 +47,11 @@ public class BrokerWithNotification {
             for(;;) {
                 if(broker.getBroker().getDestinationMap().size() != 0) {
                     Map<ActiveMQDestination, Destination> destMap = broker.getBroker().getDestinationMap();
-                    System.out.println(destMap);
+                    //System.out.println(destMap);
                     Map<ActiveMQDestination, Destination> subMap = nonFilterConsumerMap(destMap);
-                    System.out.println(subMap);
+                   // System.out.println(subMap);
 
                     System.out.println(broker.getCurrentConnections());
-
-
 
                     if (subMap.size()!=0 && nonFilterConsumer < subMap.size()) {// there is a new consumer
                             nonFilterConsumer = subMap.size();
