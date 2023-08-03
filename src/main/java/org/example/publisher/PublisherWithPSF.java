@@ -36,7 +36,7 @@ public class PublisherWithPSF {
                 mw.subToFilter(messageProducer,session,connection);
 
                 for (int i = 1; i < 100; i++) {
-                    for (int someID = 1; someID <= 2; someID++) {
+
                         // Step 10.1 Create a text message
                         //TextMessage message1 = session.createTextMessage("This is a text message " + i + " sent for someID=" + someID);
                         TextMessage message1 = session.createTextMessage("SomeID text message" + i );
@@ -57,7 +57,7 @@ public class PublisherWithPSF {
 
                         System.out.println("Publisher Plan to Sent message: " + message1.getText()+ message1.getStringProperty("messageContent"));
                         System.out.println("Publisher Plan to Sent message: " + message2.getText()+ message2.getStringProperty("messageContent"));
-                    }
+
                 }
 
 

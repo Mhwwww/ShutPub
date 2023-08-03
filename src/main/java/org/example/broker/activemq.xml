@@ -1,0 +1,33 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:amq="http://activemq.apache.org/schema/core"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://activemq.apache.org/schema/core
+                           http://activemq.apache.org/schema/core/activemq-core.xsd">
+   <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"/>
+   <broker xmlns="http://activemq.apache.org/schema/core" persistent="true" brokerName="myBroker">
+      <!-- lets define the dispatch policy -->
+      <destinationPolicy>
+         <policyMap>
+            <policyEntries>
+               <policyEntry topic="filter/targetTopic>">
+                  <pendingMessageLimitStrategy>
+                     <constantPendingMessageLimitStrategy limit="1"/>
+                  </pendingMessageLimitStrategy>
+                  <!-- 10 seconds worth -->
+<!--                  <subscriptionRecoveryPolicy>-->
+<!--                     <timedSubscriptionRecoveryPolicy recoverDuration="10000"/>-->
+<!--                  </subscriptionRecoveryPolicy>-->
+               </policyEntry>
+               <policyEntry tempTopic="true" advisoryForConsumed="true"/>
+               <policyEntry tempQueue="true" advisoryForConsumed="true"/>
+            </policyEntries>
+         </policyMap>
+      </destinationPolicy>
+
+      <transportConnectors>
+         <transportConnector name="tcp" uri="tcp://localhost:61616"/>
+      </transportConnectors>
+   </broker>
+</beans>

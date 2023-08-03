@@ -19,11 +19,39 @@
 
       <paging-directory>./data/messaging/paging</paging-directory>
 
+
       <!-- Acceptors -->
       <acceptors>
-         <acceptor name="netty-acceptor">tcp://localhost:61617</acceptor>
+         <acceptor name="netty-acceptor">tcp://localhost:61616</acceptor>
       </acceptors>
 
+      <security-settings>
+         <!--security for example queue-->
+         <security-setting match="exampleQueue">
+            <permission roles="guest" type="createDurableQueue"/>
+            <permission roles="guest" type="deleteDurableQueue"/>
+            <permission roles="guest" type="createNonDurableQueue"/>
+            <permission roles="guest" type="deleteNonDurableQueue"/>
+            <permission roles="guest" type="consume"/>
+            <permission roles="guest" type="send"/>
+            <permission roles="guest" type="browse"/>
+         </security-setting>
+      </security-settings>
+
+
+      <address-settings>
+         <address-setting match="exampleQueue">
+            <last-value-queue>true</last-value-queue>
+         </address-setting>
+      </address-settings>
+
+      <addresses>
+         <address name="exampleQueue">
+            <anycast>
+               <queue name="exampleQueue"/>
+            </anycast>
+         </address>
+      </addresses>
 
    </core>
 </configuration>

@@ -7,7 +7,7 @@ import javax.jms.*;
 
 public class Subscriber {
     public  static final String BROKER_URL = "tcp://localhost:61616";
-    public static final String DESTINATION = "topic";
+    public static final String DESTINATION = "topic?last-value=true";
 
     public static void main( String[] args ) throws Exception {
         Connection connection = null;

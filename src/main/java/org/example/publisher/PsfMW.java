@@ -1,6 +1,7 @@
 package org.example.publisher;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.broker.region.policy.ConstantPendingMessageLimitStrategy;
 import org.apache.activemq.command.ActiveMQDestination;
 
 import javax.jms.*;
@@ -122,7 +123,6 @@ public class PsfMW {
      * middleware publisher
      * */
 
-    //TODO: use the publisher session, do not initialize for filter and subscriber separately
     public void fiter(MessageProducer producer, TextMessage msg) {
         // using currentThreshold for the incoming messages
         try {
@@ -136,7 +136,7 @@ public class PsfMW {
                 String property = result[0];
                 String constraints = result[1];
 
-                if (msg.propertyExists(property) && msg.getStringProperty(property).contains(constraints)) {
+                if (msg.propertyExists(property) && msg.getStringProperty(property).contains(constraints)) {// filter unmatched msgs
                     producer.send(msg);
 
                     System.out.println("Actual Sent Message is: " + msg.getText() + " , the message property is: " + msg.getStringProperty(property) + ", it passed the threshold, and the currentThreshold is:" + currentSelector);

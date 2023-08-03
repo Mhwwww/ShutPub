@@ -26,7 +26,7 @@ public class Publisher1
 
 
             //Destination destination = session.createTopic(DESTINATION);
-            Destination destination = session.createQueue(DESTINATION);
+            Destination destination = session.createTopic(DESTINATION);
 
             //Destination destination1 = session.createTopic("targetTopic");
 

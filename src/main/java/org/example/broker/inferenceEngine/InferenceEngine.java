@@ -1,6 +1,8 @@
 package org.example.broker.inferenceEngine;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
+import org.apache.activemq.advisory.AdvisorySupport;
+import org.apache.activemq.broker.region.policy.ConstantPendingMessageLimitStrategy;
 import org.apache.activemq.command.ActiveMQDestination;
 
 import javax.jms.*;
@@ -58,10 +60,11 @@ public class InferenceEngine {
                     filterMap.replace(destination, selectorMap);
                     //if the threshold change, then publish!
                     System.out.println("--------> Going to pass threshold " + filterMap.get(destination) + " to Threshold Publisher");
+                    //TODO: clear the previous message on topic, then publish new threshold
+
                     publishThreshold(destination, filterMap.get(destination).toString());
                     System.out.println("the updated filter Map is " + filterMap);
                 }//TODO: else{} if two thresholds are "Alice" and "Bob"
-
             }
         } else {
             // if new item added! then publish
@@ -70,19 +73,17 @@ public class InferenceEngine {
             System.out.println("--------> Going to pass threshold " + filterMap.get(destination) + " to Threshold Publisher");
             publishThreshold(destination, filterMap.get(destination).toString());
         }
-
-
         //System.out.println("--------> Going to pass threshold " + filterMap.get(destination) + " to Threshold Publisher");
         //publishThreshold(destination, filterMap.get(destination).toString());
 
     }
 
     private void publishThreshold(ActiveMQDestination originalDestination, String selector) {
-        //TODO: 1. get the filter topic that need to publish the threshold
+        // 1. get the filter topic that need to publish the threshold
         String filterTopic = "";
         filterTopic = "filter/" + originalDestination.getPhysicalName();
 
-        //TODO: 2. init a publisher that sends 'threshold' to 'filterTopic'
+        // 2. init a publisher that sends 'threshold' to 'filterTopic'
         Connection connection = null;
         Session session = null;
         MessageProducer messageProducer = null;
@@ -91,20 +92,22 @@ public class InferenceEngine {
 
         try {
             connection = activeMQConnectionFactory.createConnection();
+            connection.setClientID("tempConsumer");
             session = connection.createSession(Boolean.FALSE, Session.CLIENT_ACKNOWLEDGE);
 
             Destination destination = session.createTopic(filterTopic);
+
+
             messageProducer = session.createProducer(destination);
+            messageProducer.setDeliveryMode(DeliveryMode.PERSISTENT);
 
             TextMessage msg = session.createTextMessage(selector);
 
-            messageProducer.setDeliveryMode(DeliveryMode.PERSISTENT);
-            messageProducer.setTimeToLive(10000000);
+            messageProducer.send(msg,2,0, Long.MAX_VALUE);//message, persistent, priority, ttl
 
-            //messageProducer.send(msg);
-            //message, persistent, priority, ttl
-            messageProducer.send(msg,2,0, Long.MAX_VALUE);
-            //System.out.println(messageProducer.getDeliveryMode());
+
+
+
 
             System.out.println("Sent Threshold: " + msg.getText() + " to Filter Topic: " + filterTopic);
 

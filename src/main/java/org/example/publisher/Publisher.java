@@ -29,7 +29,7 @@ public class Publisher
 
 
             //Destination destination = session.createTopic(DESTINATION);
-            Destination destination = session.createQueue(DESTINATION);
+            Destination destination = session.createTopic(DESTINATION);
 
             //Destination destination1 = session.createTopic("targetTopic");
 

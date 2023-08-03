@@ -15,14 +15,18 @@ public class Broker1 {
 
         // Configuration for the acceptor (listening for incoming connections)
         HashMap<String, Object> params = new HashMap<>();
-        params.put("host", "localhost");
-        params.put("port", 61617); // Change this to the port number where you want to run the remote broker
+        params.put("host", "0.0.0.0");
+        params.put("port", 61616); // Change this to the port number where you want to run the remote broker
         configuration.getAcceptorConfigurations().add(new TransportConfiguration(NettyAcceptorFactory.class.getName(), params));
 
-        ActiveMQServer server = ActiveMQServers.newActiveMQServer(configuration);
+
+
+        //ActiveMQServer server = ActiveMQServers.newActiveMQServer(configuration);
+        ActiveMQServer server = ActiveMQServers.newActiveMQServer("file://:/Users/minghe/test/src/main/java/psf/lastValue/broker.xml", null, null);
+
         server.start();
 
-        System.out.println("Remote LastValueBroker started at: tcp://localhost:61617");
+        System.out.println("Remote LastValueBroker started at: tcp://localhost:61616");
 
         // Keep the remote broker running until the application is terminated
         while (true) {
