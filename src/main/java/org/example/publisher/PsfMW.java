@@ -92,7 +92,7 @@ public class PsfMW {
 
             connection.start();
 
-    //TODO: delete the rule changing logic, already done in Inference Engine
+
             //map filterTopic with currentThreshold
             filterSubscriber.setMessageListener(message1 -> {
                 // Handle incoming messages here
@@ -101,7 +101,7 @@ public class PsfMW {
                     try {
                         String result = ((TextMessage) message1).getText();
                         System.out.println("we got the threshold" + result);
-
+                        //TODO: not sure whether still need this
                         if (!Objects.equals(currentSelector, result)) {
                             System.out.println("Threshold changed, New threshold is: " + result);
                             currentSelector = result;
