@@ -1,11 +1,16 @@
 package org.example.broker;
 
 import org.apache.activemq.advisory.AdvisorySupport;
+import org.apache.activemq.artemis.core.settings.impl.AddressSettings;
 import org.apache.activemq.broker.*;
 import org.apache.activemq.broker.region.Destination;
 import org.apache.activemq.broker.region.Subscription;
+import org.apache.activemq.broker.region.policy.PolicyEntry;
+import org.apache.activemq.broker.region.policy.PolicyMap;
 import org.apache.activemq.command.*;
 
+import org.apache.activemq.filter.DestinationMapEntry;
+import org.apache.activemq.security.MessageAuthorizationPolicy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,7 +33,7 @@ public class BrokerWithNotification {
 
     public static void main(String[] args) {
         BrokerService broker = new BrokerService();
-        broker.setPersistent(true);
+        broker.setPersistent(false);
 
 
         InferenceEngine inferenceEngine = new InferenceEngine();
@@ -36,6 +41,7 @@ public class BrokerWithNotification {
         try {
             broker.addConnector(BROKER_URL);
             broker.setAdvisorySupport(true);
+
 
             broker.start();
 

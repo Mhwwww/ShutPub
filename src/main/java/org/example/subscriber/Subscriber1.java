@@ -39,7 +39,7 @@ public class Subscriber1 {
             System.out.println("*************************************************************");
             System.out.println("MessageConsumer1 will only receive messages where messageContent='someID'");
             for (;;) {
-                TextMessage messageReceivedA = (TextMessage) messageConsumer1.receive();
+                TextMessage messageReceivedA = (TextMessage) messageConsumer2.receive();
                 if (messageReceivedA == null) {
                     break;
                 }
@@ -56,7 +56,7 @@ public class Subscriber1 {
             System.out.println("*************************************************************");
             System.out.println("MessageConsumer2 will only receive messages where messageContent='some'");
             for (;;) {
-                TextMessage messageReceivedB = (TextMessage) messageConsumer2.receive();
+                TextMessage messageReceivedB = (TextMessage) messageConsumer1.receive();
                 if (messageReceivedB == null) {
                     break;
                 }

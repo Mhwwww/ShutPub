@@ -86,10 +86,13 @@ public class PsfMW {
             System.out.println(fiterDestination);
 
             Topic filterTopic = session.createTopic(fiterDestination);
-            TopicSubscriber filterSubscriber = session.createDurableSubscriber(filterTopic, fiterDestination);
+            //do not need to be the durable
+            //TopicSubscriber filterSubscriber = session.createDurableSubscriber(filterTopic, fiterDestination);
+            MessageConsumer filterSubscriber = session.createConsumer(filterTopic);
 
             connection.start();
 
+    //TODO: delete the rule changing logic, already done in Inference Engine
             //map filterTopic with currentThreshold
             filterSubscriber.setMessageListener(message1 -> {
                 // Handle incoming messages here

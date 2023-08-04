@@ -12,7 +12,7 @@ import javax.jms.*;
 public class Publisher
 {
     public  static final String BROKER_URL = "tcp://localhost:61616";
-    public static final String DESTINATION = "targetTopic";
+    public static final String DESTINATION = "topic";
 
     public static void main( String[] args ) {
         Connection connection = null;
@@ -29,7 +29,8 @@ public class Publisher
 
 
             //Destination destination = session.createTopic(DESTINATION);
-            Destination destination = session.createTopic(DESTINATION);
+            Destination destination = session.createQueue(DESTINATION);
+
 
             //Destination destination1 = session.createTopic("targetTopic");
 
@@ -38,9 +39,7 @@ public class Publisher
 //TODO: use queue configuration to create a queue
             QueueConfiguration queueConfiguration = new QueueConfiguration();
             queueConfiguration.setLastValue(Boolean.TRUE);
-
-
-
+            
 
 
 
@@ -52,6 +51,7 @@ public class Publisher
 
 
             for(int i=0; i<10; i++){
+
 
                 messageProducer.send(msg);
                 System.out.println("Sent message: " + msg.getText()+"the message property is: ****"+ msg.getStringProperty("messageContent"));

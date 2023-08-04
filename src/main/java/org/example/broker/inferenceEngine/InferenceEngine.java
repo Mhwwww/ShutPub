@@ -4,6 +4,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.advisory.AdvisorySupport;
 import org.apache.activemq.broker.region.policy.ConstantPendingMessageLimitStrategy;
 import org.apache.activemq.command.ActiveMQDestination;
+import org.apache.activemq.command.ActiveMQTopic;
 
 import javax.jms.*;
 
@@ -60,7 +61,6 @@ public class InferenceEngine {
                     filterMap.replace(destination, selectorMap);
                     //if the threshold change, then publish!
                     System.out.println("--------> Going to pass threshold " + filterMap.get(destination) + " to Threshold Publisher");
-                    //TODO: clear the previous message on topic, then publish new threshold
 
                     publishThreshold(destination, filterMap.get(destination).toString());
                     System.out.println("the updated filter Map is " + filterMap);
@@ -78,7 +78,7 @@ public class InferenceEngine {
 
     }
 
-    private void publishThreshold(ActiveMQDestination originalDestination, String selector) {
+    public void publishThreshold(ActiveMQDestination originalDestination, String selector) {
         // 1. get the filter topic that need to publish the threshold
         String filterTopic = "";
         filterTopic = "filter/" + originalDestination.getPhysicalName();
@@ -99,17 +99,16 @@ public class InferenceEngine {
 
 
             messageProducer = session.createProducer(destination);
-            messageProducer.setDeliveryMode(DeliveryMode.PERSISTENT);
+            //messageProducer.setDeliveryMode(DeliveryMode.PERSISTENT);
 
             TextMessage msg = session.createTextMessage(selector);
+            messageProducer.send(msg);
 
-            messageProducer.send(msg,2,0, Long.MAX_VALUE);//message, persistent, priority, ttl
-
-
-
-
+            //messageProducer.send(msg,2,0, Long.MAX_VALUE);//message, persistent, priority, ttl
 
             System.out.println("Sent Threshold: " + msg.getText() + " to Filter Topic: " + filterTopic);
+
+
 
         } catch (JMSException e) {
             throw new RuntimeException(e);
@@ -124,6 +123,22 @@ public class InferenceEngine {
 
         }
 
+
+    }
+
+    public Boolean isThresholdExist(String destinationName){
+
+        ActiveMQDestination pubDestination = new ActiveMQTopic(destinationName);
+
+        if (filterMap.containsKey(pubDestination)){
+            // publish the threshold again
+            publishThreshold(pubDestination, filterMap.get(pubDestination).toString());
+            System.out.println("!!!!!!!!!!Publish Threshold for the NEW Publisher!!!!!!!!!!!!!!!");
+
+            return true;
+        }else {
+            return false;
+        }
 
     }
 }

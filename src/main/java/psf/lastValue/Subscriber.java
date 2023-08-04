@@ -21,7 +21,7 @@ public class Subscriber {
             connection = activeMQConnectionFactory.createConnection();
             session = connection.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
 
-            Queue queue = session.createQueue(DESTINATION);
+            Topic queue = session.createTopic(DESTINATION);
             MessageConsumer messageConsumer1 = session.createConsumer(queue);
 
             connection.start();

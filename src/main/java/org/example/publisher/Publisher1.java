@@ -24,29 +24,17 @@ public class Publisher1
             session = connection.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
             //Message msg = session.createTextMessage("TESTING");
 
-
             //Destination destination = session.createTopic(DESTINATION);
             Destination destination = session.createTopic(DESTINATION);
 
-            //Destination destination1 = session.createTopic("targetTopic");
-
             messageProducer = session.createProducer(destination);
             messageProducer1 = session.createProducer(destination);
-//TODO: use queue configuration to create a queue
-            QueueConfiguration queueConfiguration = new QueueConfiguration();
-            queueConfiguration.setLastValue(Boolean.TRUE);
-
-
-
-
-
 
             TextMessage msg = session.createTextMessage("***********SOMEID MESSAES***********");
             TextMessage msg1 = session.createTextMessage("***********NOID MESSAGES***********");
 
             msg.setStringProperty("messageContent", "someID");
             msg1.setStringProperty("messageContent", "noID");
-
 
             for(int i=0; i<10; i++){
 
