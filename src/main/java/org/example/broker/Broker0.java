@@ -15,59 +15,56 @@ import org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnectorFactor
 import org.apache.activemq.artemis.core.server.ActiveMQServer;
 import org.apache.activemq.artemis.core.server.ActiveMQServers;
 import org.apache.activemq.artemis.core.server.cluster.Bridge;
+import org.apache.activemq.broker.BrokerFactory;
+import org.apache.activemq.broker.BrokerService;
+import org.apache.activemq.broker.Connection;
+import org.apache.activemq.command.ActiveMQDestination;
+import org.example.broker.connectionManager.ConnectionManager;
 
 import javax.jms.*;
+import java.net.URI;
+import java.util.ArrayList;
 import java.util.Collections;
 
 public class Broker0 {
-    public static final String LOCAL_BROKER_URL = "tcp://localhost:61616";
+    public static final String BROKER_URL = "tcp://localhost:61616";
+    static ConnectionManager connectionManager = new ConnectionManager();
 
     public static void main(String[] args) {
+//        BrokerService broker = new BrokerService();
+//        broker.setPersistent(false);
+
         try {
+            String configFilePath = "xbean:file:/Users/minghe/test/src/main/java/org/example/broker/activemq.xml";
+            BrokerService broker = BrokerFactory.createBroker(URI.create(configFilePath));
 
-            BridgeConfiguration brigeConf = new BridgeConfiguration()
-                    .setName("sausage-factory")
-                    .setQueueName("sausage-factory")
-                    .setForwardingAddress("mincing-machine")
-                    .setFilterString("name='abc'")
-                    .setStaticConnectors(Collections.singletonList("tcp://localhost:61617"));
+            broker.start();
 
-            // 创建并配置本地 LastValueBroker
-            Configuration configuration = new ConfigurationImpl()
-                    .setPersistenceEnabled(false)
-                    .setSecurityEnabled(false)
-                    .addAcceptorConfiguration(new TransportConfiguration(NettyAcceptorFactory.class.getName()))
-                    .addBridgeConfiguration(brigeConf)
-                    .addConnectorConfiguration("remote-connector", new TransportConfiguration(NettyConnectorFactory.class.getName()));
+            Connection[] brokerClients = broker.getBroker().getClients();
+            ActiveMQDestination[] clientDest = broker.getBroker().getDestinations();
 
-            ActiveMQServer localBroker = ActiveMQServers.newActiveMQServer(configuration);
-            localBroker.start();
-
-
-            System.out.println("Local LastValueBroker started at: " + localBroker.getAddressInfo(SimpleString.toSimpleString(LOCAL_BROKER_URL)));
-
-            Thread.sleep(2000);
-
-            while (true){
-                Bridge bridge = localBroker.getClusterManager().getBridges().get("sausage-factory");
-
-                if (bridge != null && bridge.isConnected()){
-                    System.out.println("Success!!!!!!!!!!!!!!");
-                    break;
-                }
-
-            }
-
-
-            // 等待一段时间，确保消息被处理和转发
-
-
-
+//            for (Connection connection : brokerClients) {
+//
+//                System.out.println(broker.getBroker().getClients().length);
+//                System.out.println("Connection ID: " + connection.getConnectionId());
+//                System.out.println("Remote Address: " + connection.getRemoteAddress());
+//                //System.out.println(connection.getStatistics());
+//
+//
+//            }
+//
+//            for(ActiveMQDestination dest : clientDest){
+//                System.out.println(dest.isComposite());//f
+//
+//
+//                dest.
+//
+//
+//            }
 
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
-
 
 }

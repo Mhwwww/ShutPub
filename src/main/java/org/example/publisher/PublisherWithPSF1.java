@@ -10,7 +10,7 @@ public class PublisherWithPSF1 {
     //      2.2 the mw will subscriber to the according filter topic
     //      2.3 when there are subscribed 'threshold', mw will fiter the incoming messages then send results to Destination.
     public static final String BROKER_URL = "tcp://localhost:61616";
-    public static final String DESTINATION = "topic";
+    public static final String DESTINATION = "targetTopic";
 
     public static void main(String[] args) {
         Connection connection = null;
