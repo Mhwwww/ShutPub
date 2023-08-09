@@ -92,7 +92,7 @@ public class Broker {
                         if (selector != null) {
                             System.out.println("********* This consumer has a selector, send metadata to Inference Engine *********");
 
-                            inferenceEngine.inferenceEngine(destination, selector);
+                            inferenceEngine.inferenceEngine(destination, selector, System.currentTimeMillis());
 
                         }
                     }

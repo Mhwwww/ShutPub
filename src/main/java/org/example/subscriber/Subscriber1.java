@@ -6,7 +6,7 @@ import javax.jms.*;
 
 public class Subscriber1 {
     public  static final String BROKER_URL = "tcp://localhost:61616";
-    public static final String DESTINATION = "topic";
+    public static final String DESTINATION = "targetTopic";
 
     public static void main( String[] args ) throws Exception {
         Connection connection = null;
@@ -31,7 +31,7 @@ public class Subscriber1 {
             //destination, property = 'value', noLocal
             MessageConsumer messageConsumer1 = session.createConsumer(destination, "messageContent='someIDE'", false);
 
-            MessageConsumer messageConsumer2 = session.createConsumer(destination, "messageContent='someID'", false);
+            MessageConsumer messageConsumer2 = session.createConsumer(destination, "messageContent='som'", false);
 
 
             connection.start();

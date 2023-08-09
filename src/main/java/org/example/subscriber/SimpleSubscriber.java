@@ -1,17 +1,13 @@
 package org.example.subscriber;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
-import org.apache.activemq.broker.BrokerService;
-import org.apache.camel.component.jms.reply.CorrelationTimeoutMap;
-import org.apache.camel.component.jms.reply.MessageSelectorCreator;
 
 import javax.jms.*;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
 
-public class Subscriber {
-    public  static final String BROKER_URL = "tcp://localhost:61616";
-    public static final String DESTINATION = "targetTopic";
+import static org.example.cong.Configuration.BROKER_URL;
+import static org.example.cong.Configuration.DESTINATION;
+
+public class SimpleSubscriber {
 
     public static void main( String[] args ) throws Exception {
         Connection connection = null;
@@ -45,16 +41,17 @@ public class Subscriber {
             System.out.println("MessageConsumer1 will only receive messages where messageContent='someID'");
             for (;;) {
                 TextMessage messageReceivedA = (TextMessage) messageConsumer1.receive();
+                long timeRev = System.currentTimeMillis();
                 if (messageReceivedA == null) {
                     break;
                 }
-                System.out.println("*****************"+messageConsumer1.getMessageSelector());
+                long timeSent = messageReceivedA.getLongProperty("timeSent");
 
-                System.out.println("messageConsumer1 received ");
+
+                System.out.println("Received Message with selector: "+messageConsumer1.getMessageSelector()+", at "+ System.currentTimeMillis());
+
+                System.out.println( timeRev-timeSent);
             }
-
-
-
 
 
             // Step 13. Consume the messages from MessageConsumer2, filtering out someID=2
@@ -65,7 +62,7 @@ public class Subscriber {
                 if (messageReceivedB == null) {
                     break;
                 }
-
+                messageReceivedB.getLongProperty("timeSent");
                 System.out.println("messageConsumer2 received ");
             }
 

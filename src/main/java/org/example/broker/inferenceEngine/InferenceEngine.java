@@ -1,22 +1,25 @@
 package org.example.broker.inferenceEngine;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
-import org.apache.activemq.advisory.AdvisorySupport;
-import org.apache.activemq.broker.region.policy.ConstantPendingMessageLimitStrategy;
+import org.apache.activemq.broker.BrokerService;
 import org.apache.activemq.command.ActiveMQDestination;
 import org.apache.activemq.command.ActiveMQTopic;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.jms.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.example.publisher.PublisherWithPSF.BROKER_URL;
+import static org.example.cong.Configuration.BROKER_URL;
 
 
 public class InferenceEngine {
 
-    private String threshold;
+   // private String threshold;
+    private static final Logger logger = LoggerFactory.getLogger(BrokerService.class);
+
     private Map<ActiveMQDestination, Map<String, String>> filterMap = new HashMap<>();
 
     //  1. get multiple subscriptions that :
@@ -28,11 +31,11 @@ public class InferenceEngine {
     //                  return threshold = someID ==> the larger scopt
     //          2.2 test case2: constraints1 = alice, and constraints = bob ==> No intersection
     //                  return threshold = alice || bob
-    public void inferenceEngine(ActiveMQDestination destination, String selector) {
+    public void inferenceEngine(ActiveMQDestination destination, String selector, long time) {
 
-        System.out.println("---------------- Got Consumer Selector Input ----------------");
-        System.out.println(destination.getPhysicalName());
-        System.out.println(selector);
+        logger.debug("---------------- Got Consumer Selector Input ----------------");
+        logger.debug(destination.getPhysicalName());
+        logger.debug(selector);
 
         destination.getPhysicalName();
         //There is no publisher-sub-threshold topic, because the sub-topics do not have selector.
@@ -53,28 +56,35 @@ public class InferenceEngine {
         if (filterMap.containsKey(destination)) {// there is already selector on this topic
             //compare current threshold with incoming selector
             // current selector
-            System.out.println("current selector: " + filterMap.get(destination));
+            logger.debug("current selector: " + filterMap.get(destination));
 
             if (filterMap.get(destination).containsKey(property)) {// there is already constraints for the given property
-                System.out.println("current constraints: " + filterMap.get(destination).get(property));
+                long startGenerateTime;
+                logger.debug("current constraints: " + filterMap.get(destination).get(property));
                 if (filterMap.get(destination).get(property).contains(constraints) && !filterMap.get(destination).get(property).equals(constraints)) {//someID contains some
                     filterMap.replace(destination, selectorMap);
                     //if the threshold change, then publish!
-                    System.out.println("--------> Going to pass threshold " + filterMap.get(destination) + " to Threshold Publisher");
+                    logger.debug("--------> Going to pass threshold " + filterMap.get(destination) + " to Threshold Publisher");
 
+                    //Update Threshold to Meta Topic
                     publishThreshold(destination, filterMap.get(destination).toString());
-                    System.out.println("the updated filter Map is " + filterMap);
+                    logger.info("Latency Updated Threshold is: {}", System.currentTimeMillis()-time);
+
+                    logger.debug("the updated filter Map is " + filterMap);
                 }//TODO: else{} if two thresholds are "Alice" and "Bob"
             }
         } else {
             // if new item added! then publish
             filterMap.put(destination, selectorMap);
-            System.out.println("**************** ADD new Pair to the Fiter Map ***********" + filterMap.size());
-            System.out.println("--------> Going to pass threshold " + filterMap.get(destination) + " to Threshold Publisher");
+            logger.debug("**************** ADD new Pair to the Fiter Map ***********" + filterMap.size());
+            logger.debug("--------> Going to pass threshold " + filterMap.get(destination) + " to Threshold Publisher");
+
+            //Publish Threshold to Meta Topic
             publishThreshold(destination, filterMap.get(destination).toString());
+            logger.info("Latency to Publish the NEW Threshold is: {}", System.currentTimeMillis()-time);
+
         }
-        //System.out.println("--------> Going to pass threshold " + filterMap.get(destination) + " to Threshold Publisher");
-        //publishThreshold(destination, filterMap.get(destination).toString());
+
 
     }
 
@@ -97,18 +107,20 @@ public class InferenceEngine {
 
             Destination destination = session.createTopic(filterTopic);
 
-
             messageProducer = session.createProducer(destination);
             //messageProducer.setDeliveryMode(DeliveryMode.PERSISTENT);
 
             TextMessage msg = session.createTextMessage(selector);
+            msg.setLongProperty("thresholdTimeSent", System.currentTimeMillis());
+
+            //The Time that Published the threshold to Meta Topic
+            //logger.info("The Time that Published the threshold to Meta Topic at: "+ System.currentTimeMillis());
             messageProducer.send(msg);
 
+            //logger.info("Threshold Send Successfully at: "+ System.currentTimeMillis());
             //messageProducer.send(msg,2,0, Long.MAX_VALUE);//message, persistent, priority, ttl
 
-            System.out.println("Sent Threshold: " + msg.getText() + " to Filter Topic: " + filterTopic);
-
-
+            logger.debug("Sent Threshold: " + msg.getText() + " to Filter Topic: " + filterTopic);
 
         } catch (JMSException e) {
             throw new RuntimeException(e);
@@ -133,7 +145,7 @@ public class InferenceEngine {
         if (filterMap.containsKey(pubDestination)){
             // publish the threshold again
             publishThreshold(pubDestination, filterMap.get(pubDestination).toString());
-            System.out.println("!!!!!!!!!!Publish Threshold for the NEW Publisher!!!!!!!!!!!!!!!");
+            logger.debug("!!!!!!!!!!Publish Threshold for the NEW Publisher!!!!!!!!!!!!!!!");
 
             return true;
         }else {

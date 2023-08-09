@@ -44,6 +44,11 @@ public class BrokerWithNotification {
 
 
             broker.start();
+            System.out.println("CONSUMER SYSTEM USAGE "+ broker.getConsumerSystemUsage().getMemoryUsage());
+            System.out.println("PRODUCER SYSTEM USAGE"+broker.getProducerSystemUsage().getStoreUsage());
+            System.out.println("BROKER SYSTEM USAGE"+broker.getSystemUsage().getStoreUsage());
+
+
 
 
             //Thread.sleep(5000);
@@ -91,7 +96,7 @@ public class BrokerWithNotification {
                                         if (selector != null) {
                                             System.out.println("********* This consumer has a selector *********");
                                             System.out.println("********* Send metadata to Inference Engine *********");
-                                            inferenceEngine.inferenceEngine(destination, selector);
+                                            inferenceEngine.inferenceEngine(destination, selector,System.currentTimeMillis());
                                         } else {
                                             System.out.println("This subscription does NOT have a selector ");
                                         }
