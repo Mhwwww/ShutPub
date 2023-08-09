@@ -42,10 +42,9 @@ public class PsfMW {
             filterSubscriber.setMessageListener(message1 -> {
                 // Handle incoming messages here
                 if (message1 instanceof TextMessage) {
-                    //System.out.println("we got the threshold");
                     try {
                         String result = ((TextMessage) message1).getText();
-                        //TODO: the time that publisher middleware receives a threshold
+                        //the time that publisher middleware receives a threshold
                         long gotThresholdTime =System.currentTimeMillis();
                         logger.debug("we got the threshold" + result);
                         logger.info("{}: Got Threshold at: {}, Threshold arriving latency is: {}", connection.getClientID(), gotThresholdTime, gotThresholdTime- message1.getLongProperty("thresholdTimeSent") );

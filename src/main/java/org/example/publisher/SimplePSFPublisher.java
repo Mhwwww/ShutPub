@@ -21,12 +21,10 @@ public class SimplePSFPublisher {
             Thread publisherThread = new Thread(() -> {
                 PublisherWithPSF psf = new PublisherWithPSF();
                 psf.startProducer(BROKER_URL, DESTINATION, name);
-
             });
             publisherThread.start();
 
-            Thread.sleep(1000);
-
+            Thread.sleep(700);
 
         }
     }

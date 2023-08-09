@@ -23,100 +23,87 @@ public class ConnectionManager {
     private static int currentConnection = 0;
     private static InferenceEngine inferenceEngine = new InferenceEngine();
 
-    public void callInferenceEngine(BrokerService broker) {
+    public void connectionManager(BrokerService broker) {
         try {
             if (broker.getBroker().getDestinationMap().size() != 0) {
 
                 Map<ActiveMQDestination, Destination> destMap = broker.getBroker().getDestinationMap();
                 Map<ActiveMQDestination, Destination> subMap = nonFilterConsumerMap(destMap);
-                //logger.info(String.valueOf(broker.getCurrentConnections()));
 
-                if (broker.getCurrentConnections()!=currentConnection){
-                    //TODO: either a client disconnected or a new client is connected
-                    if (broker.getCurrentConnections() < currentConnection){
-                        currentConnection = broker.getCurrentConnections();
-                        System.out.println("------------------ A Client Disconnected ------------------");
-                    }
+                if (broker.getCurrentConnections() < currentConnection) {
+                    System.out.println("------------------ A Client Disconnected ------------------");
+                    currentConnection = broker.getCurrentConnections();
+                }
 
-                    if (broker.getCurrentConnections() > currentConnection) {
-                        // There is a new client connected to the broker
-                        long newClientTime = System.currentTimeMillis();
-                        logger.info("--------------New Client Arrived at: {}--------------", newClientTime);
+                if (broker.getCurrentConnections() > currentConnection) {
+                    // There is a new client connected to the broker
+                    long newClientTime = System.currentTimeMillis();
+                    logger.info("--------------New Client Arrived at: {}--------------", newClientTime);
 
+                    currentConnection = broker.getCurrentConnections();
+                    currentSubNum = getSubscriptionNum(subMap);
 
-                        currentConnection = broker.getCurrentConnections();
-                        currentSubNum = getSubscriptionNum(subMap);
-                        // if there is a consumer, and more subscriptions --> a new consumer
-                        //System.out.println(currentSubNum);
-                        //System.out.println(subscriptionNum);
+                    // if there is a consumer, and more subscriptions --> a new consumer
+                    if (subMap.size() != 0 && currentSubNum > subscriptionNum) {
+                        //This New Client is a SimpleSubscriber
+                        long subFoundTime = System.currentTimeMillis();
 
-                        if (subMap.size() != 0 && currentSubNum > subscriptionNum) {
-                            //This New Client is a SimpleSubscriber
-                            long subFoundTime = System.currentTimeMillis();
+                        logger.info("Subscriber Identification Latency is: {}", subFoundTime - newClientTime);
+                        logger.debug("New SimpleSubscriber found at: {}", System.currentTimeMillis());
 
-                            logger.info("Subscriber Identification Latency is: {}", subFoundTime-newClientTime);
-                            logger.debug("New SimpleSubscriber found at: {}", System.currentTimeMillis());
+                        subscriptionNum = currentSubNum;
 
-                            subscriptionNum = currentSubNum;
+                        logger.debug("-------------------------------------------------------");
+                        for (Map.Entry<ActiveMQDestination, Destination> entry : subMap.entrySet()) {
+                            ActiveMQDestination key = entry.getKey();
+                            Destination value = entry.getValue();
 
-                            logger.debug("-------------------------------------------------------");
-                            for (Map.Entry<ActiveMQDestination, Destination> entry : subMap.entrySet()) {
-                                ActiveMQDestination key = entry.getKey();
-                                Destination value = entry.getValue();
+                            if (value.getConsumers().size() != 0) {
+                                //call the inference engine
+                                logger.debug("this not-meta consumer " + key.getPhysicalName() + " has " + value.getConsumers().size() + " subscription");
 
-                                if (value.getConsumers().size() != 0) {
-                                    //call the inference engine
-                                    logger.debug("this not-meta consumer " + key.getPhysicalName() + " has " + value.getConsumers().size() + " subscription");
+                                List<Subscription> consumer = value.getConsumers();
 
-                                    List<Subscription> consumer = value.getConsumers();
+                                for (int i = 0; i < consumer.size(); i++) {
+                                    ConsumerInfo consumerInfo = consumer.get(i).getConsumerInfo();
+                                    //topic--ActiveMQDestination
+                                    ActiveMQDestination destination = consumerInfo.getDestination();
+                                    //filter--String
+                                    String selector = consumerInfo.getSelector();
 
-                                    for (int i = 0; i < consumer.size(); i++) {
-                                        ConsumerInfo consumerInfo = consumer.get(i).getConsumerInfo();
-                                        //topic--ActiveMQDestination
-                                        ActiveMQDestination destination = consumerInfo.getDestination();
-                                        //filter--String
-                                        String selector = consumerInfo.getSelector();
+                                    //consumer id--ConsumerID; consumerInfo.getConsumerId();
+                                    //System.out.println("Consumer Destination: " + consumerInfo.getDestination() + " ,Consumer Selector: " + consumerInfo.getSelector());
 
-                                        //consumer id--ConsumerID; consumerInfo.getConsumerId();
-                                        //System.out.println("Consumer Destination: " + consumerInfo.getDestination() + " ,Consumer Selector: " + consumerInfo.getSelector());
+                                    //1. get "selector & topic"; 2. update threshold for filter topic in "inference engine".
+                                    if (selector != null) {
+                                        logger.debug("********* This consumer has a selector, Send metadata to Inference Engine *********");
 
-                                        //1. get "selector & topic"; 2. update threshold for filter topic in "inference engine".
-                                        if (selector != null) {
-                                            logger.debug("********* This consumer has a selector, Send metadata to Inference Engine *********");
+                                        //Time To Call the Inference Engine
+                                        logger.debug("Time To Start Generating Threshold" + System.currentTimeMillis());
 
-                                            //Time To Call the Inference Engine
-                                            logger.debug("Time To Start Generating Threshold"+ System.currentTimeMillis());
-
-                                            inferenceEngine.inferenceEngine(destination, selector,System.currentTimeMillis());
-                                        } else {
-                                            logger.debug("This subscription does NOT have a selector ");
-                                        }
+                                        inferenceEngine.inferenceEngine(destination, selector, System.currentTimeMillis());
+                                    } else {
+                                        logger.debug("This subscription does NOT have a selector ");
                                     }
                                 }
                             }
-                            //TODO: Finish Operations on the New Connected SimpleSubscriber
-                            long subFinishTime = System.currentTimeMillis();
-                            logger.info("Incoming Subscriber related Latency is: {}", subFinishTime-subFoundTime);
-
-                        } else {
-                            long pubFoundTime = System.currentTimeMillis();
-                            logger.info("Publisher Identification Latency is: {}", pubFoundTime-newClientTime);
-
-                            // This New Client is a Publisher
-                            //logger.info("New Publisher found at: {}", System.currentTimeMillis());
-
-                            publisherMap(destMap);
-
-                            //Finish Operations on the New Connected Publisher
-                            long pubFinishTime = System.currentTimeMillis();
-                            logger.info("Incoming Publisher Related Operations Latency is: {}", pubFinishTime-pubFoundTime);
                         }
+                        //Finish Operations on the New Connected SimpleSubscriber
+                        long subFinishTime = System.currentTimeMillis();
+                        logger.info("Incoming Subscriber related Latency is: {}", subFinishTime - subFoundTime);
+
+                    } else {
+                        long pubFoundTime = System.currentTimeMillis();
+                        logger.info("Publisher Identification Latency is: {}", pubFoundTime - newClientTime);
+                        //logger.info("New Publisher found at: {}", System.currentTimeMillis());
+
+                        publisherMap(destMap);
+
+                        //Finish Operations on the New Connected Publisher
+                        long pubFinishTime = System.currentTimeMillis();
+                        logger.info("Incoming Publisher Related Operations Latency is: {}", pubFinishTime - pubFoundTime);
                     }
                 }
-
-
-                // either a new consumer or a new producer
-
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
@@ -152,7 +139,6 @@ public class ConnectionManager {
             ActiveMQDestination key = entry.getKey();
             Destination value = entry.getValue();
 
-            //producer map
             if (key.getPhysicalName().contains(AdvisorySupport.PRODUCER_ADVISORY_TOPIC_PREFIX) && !key.getPhysicalName().contains("filter/")) {
                 producerMap.put(key, value);
                 logger.debug("producerMap : " + producerMap);

@@ -6,6 +6,5 @@ public class Configuration {
     public static final String DESTINATION = "targetTopic";
 
     public static final int CONSUMER_NUM = 2;
-    public static final int PRODUCER_NUM = 20;
-
+    public static final int PRODUCER_NUM = 200;
 }
