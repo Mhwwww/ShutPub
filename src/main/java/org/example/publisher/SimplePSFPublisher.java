@@ -4,9 +4,6 @@ import org.apache.activemq.broker.BrokerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import static org.example.cong.Configuration.*;
 
 public class SimplePSFPublisher {
@@ -24,7 +21,7 @@ public class SimplePSFPublisher {
             });
             publisherThread.start();
 
-            Thread.sleep(700);
+            Thread.sleep(PRODUCER_INTERVAL);
 
         }
     }

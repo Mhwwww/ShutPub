@@ -6,7 +6,7 @@ import javax.jms.*;
 
 public class Subscriber1 {
     public  static final String BROKER_URL = "tcp://localhost:61616";
-    public static final String DESTINATION = "targetTopic";
+    public static final String DESTINATION = "Topic";
 
     public static void main( String[] args ) throws Exception {
         Connection connection = null;
@@ -19,7 +19,6 @@ public class Subscriber1 {
 
 
         ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(BROKER_URL);
-        //System.out.println( "Hello World!" );
         try{
 
             connection = activeMQConnectionFactory.createConnection();
@@ -27,12 +26,8 @@ public class Subscriber1 {
 
             Destination destination = session.createTopic(DESTINATION);
 
-            //messageConsumer = session.createConsumer(destination);
-            //destination, property = 'value', noLocal
-            MessageConsumer messageConsumer1 = session.createConsumer(destination, "messageContent='someIDE'", false);
-
+            MessageConsumer messageConsumer1 = session.createConsumer(destination, "messageContent='someIDE'", false);//destination, property = 'value', noLocal
             MessageConsumer messageConsumer2 = session.createConsumer(destination, "messageContent='som'", false);
-
 
             connection.start();
 
@@ -47,10 +42,6 @@ public class Subscriber1 {
 
                 System.out.println("messageConsumer1 received ");
             }
-
-
-
-
 
             // Step 13. Consume the messages from MessageConsumer2, filtering out someID=2
             System.out.println("*************************************************************");

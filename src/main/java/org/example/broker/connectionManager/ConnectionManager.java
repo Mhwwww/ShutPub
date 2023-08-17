@@ -6,6 +6,7 @@ import org.apache.activemq.broker.region.Destination;
 import org.apache.activemq.broker.region.Subscription;
 import org.apache.activemq.command.ActiveMQDestination;
 import org.apache.activemq.command.ConsumerInfo;
+import org.example.MetricsCollector;
 import org.example.broker.inferenceEngine.InferenceEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,34 +23,45 @@ public class ConnectionManager {
     private static int currentSubNum = 0;
     private static int currentConnection = 0;
     private static InferenceEngine inferenceEngine = new InferenceEngine();
+    private static MetricsCollector metricsCollector = new MetricsCollector();
 
     public void connectionManager(BrokerService broker) {
         try {
-            if (broker.getBroker().getDestinationMap().size() != 0) {
+            if(broker.getCurrentConnections()>0){
+            //if (broker.getBroker().getDestinationMap().size() != 0) {
 
                 Map<ActiveMQDestination, Destination> destMap = broker.getBroker().getDestinationMap();
                 Map<ActiveMQDestination, Destination> subMap = nonFilterConsumerMap(destMap);
 
                 if (broker.getCurrentConnections() < currentConnection) {
                     System.out.println("------------------ A Client Disconnected ------------------");
+                    logger.debug("Client Disconnected Time: {}", System.nanoTime());
                     currentConnection = broker.getCurrentConnections();
                 }
 
                 if (broker.getCurrentConnections() > currentConnection) {
                     // There is a new client connected to the broker
-                    long newClientTime = System.currentTimeMillis();
+                    long newClientTime = System.nanoTime();
                     logger.info("--------------New Client Arrived at: {}--------------", newClientTime);
+                    metricsCollector.logTimestamp("New Client Arrived at", newClientTime);
 
                     currentConnection = broker.getCurrentConnections();
                     currentSubNum = getSubscriptionNum(subMap);
 
+//                    logger.error(String.valueOf(subMap.size()));
+//                    logger.error(String.valueOf(currentSubNum));
+//                    logger.error(String.valueOf(subscriptionNum));
+
+
                     // if there is a consumer, and more subscriptions --> a new consumer
                     if (subMap.size() != 0 && currentSubNum > subscriptionNum) {
                         //This New Client is a SimpleSubscriber
-                        long subFoundTime = System.currentTimeMillis();
+                        long subFoundTime = System.nanoTime();
+                        logger.info("A New Subscriber is Identified at: {}", subFoundTime);
+                        metricsCollector.logTimestamp("A New Subscriber is Identified at", subFoundTime);
 
                         logger.info("Subscriber Identification Latency is: {}", subFoundTime - newClientTime);
-                        logger.debug("New SimpleSubscriber found at: {}", System.currentTimeMillis());
+
 
                         subscriptionNum = currentSubNum;
 
@@ -79,9 +91,11 @@ public class ConnectionManager {
                                         logger.debug("********* This consumer has a selector, Send metadata to Inference Engine *********");
 
                                         //Time To Call the Inference Engine
-                                        logger.debug("Time To Start Generating Threshold" + System.currentTimeMillis());
+                                        logger.info("Start Generating Threshold at: {}", System.nanoTime());
+                                        metricsCollector.logTimestamp("Start Generating Threshold at", System.nanoTime());
 
-                                        inferenceEngine.inferenceEngine(destination, selector, System.currentTimeMillis());
+                                        inferenceEngine.inferenceEngine(destination, selector, System.nanoTime());
+
                                     } else {
                                         logger.debug("This subscription does NOT have a selector ");
                                     }
@@ -89,18 +103,24 @@ public class ConnectionManager {
                             }
                         }
                         //Finish Operations on the New Connected SimpleSubscriber
-                        long subFinishTime = System.currentTimeMillis();
+                        long subFinishTime = System.nanoTime();
+                        logger.info("Finish New Subscriber Related Operations at: {}", subFinishTime);
+                        metricsCollector.logTimestamp("Finish New Subscriber Related Operations at", subFinishTime);
+
                         logger.info("Incoming Subscriber related Latency is: {}", subFinishTime - subFoundTime);
 
                     } else {
-                        long pubFoundTime = System.currentTimeMillis();
+                        long pubFoundTime =System.nanoTime();
                         logger.info("Publisher Identification Latency is: {}", pubFoundTime - newClientTime);
-                        //logger.info("New Publisher found at: {}", System.currentTimeMillis());
+                        //logger.info("New Publisher found at: {}", System.nanoTime());
 
                         publisherMap(destMap);
 
                         //Finish Operations on the New Connected Publisher
-                        long pubFinishTime = System.currentTimeMillis();
+                        long pubFinishTime = System.nanoTime();
+                        logger.info("Finish New Publisher Related Operations at: {}", pubFinishTime);
+                        metricsCollector.logTimestamp("Finish New Publisher Related Operations at", pubFinishTime);
+
                         logger.info("Incoming Publisher Related Operations Latency is: {}", pubFinishTime - pubFoundTime);
                     }
                 }
@@ -166,7 +186,22 @@ public class ConnectionManager {
             String realName = key.getPhysicalName().replace("ActiveMQ.Advisory.Producer.Topic.", "");
             logger.debug(realName);
 
+
+            long startCheckTime = System.nanoTime();
+            logger.info("Start to Check Filter Existence for the Late Publisher at: {}", startCheckTime);
+            metricsCollector.logTimestamp("Start to Check Filter Existence for the Late Publisher at", startCheckTime);
+
             Boolean ifExist = inferenceEngine.isThresholdExist(realName);
+
+            long finishCheckTime = System.nanoTime();
+            logger.info("Finish Checking Filter Existence at: {}", finishCheckTime);
+            metricsCollector.logTimestamp("Finish Checking Filter Existence at: ", finishCheckTime);
+
+
+            metricsCollector.logTimestamp("Checking Latency is", finishCheckTime-startCheckTime);
+            logger.info("Checking Latency is: {}", finishCheckTime-startCheckTime);
+
+
 
             if (ifExist) {
                 logger.debug("there is a threshold for this publisher, publish this threshold again.");

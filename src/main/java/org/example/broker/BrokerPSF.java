@@ -4,9 +4,10 @@ import org.apache.activemq.broker.*;
 import org.example.broker.connectionManager.ConnectionManager;
 
 
+import static org.example.cong.Configuration.BROKER_INTERVAL;
 import static org.example.cong.Configuration.BROKER_URL;
 
-public class BrokerWithNotification1 {
+public class BrokerPSF {
     static ConnectionManager connectionManager = new ConnectionManager();
     public static void main(String[] args) {
         BrokerService broker = new BrokerService();
@@ -22,7 +23,7 @@ public class BrokerWithNotification1 {
 
             for (;;){
                 connectionManager.connectionManager(broker);
-                Thread.sleep(100);
+                Thread.sleep(BROKER_INTERVAL);
             }
         } catch (Exception e) {
             throw new RuntimeException(e);

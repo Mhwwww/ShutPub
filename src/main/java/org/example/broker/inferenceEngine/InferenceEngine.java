@@ -4,34 +4,39 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.broker.BrokerService;
 import org.apache.activemq.command.ActiveMQDestination;
 import org.apache.activemq.command.ActiveMQTopic;
+import org.example.MetricsCollector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.jms.*;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.LogManager;
 
 import static org.example.cong.Configuration.BROKER_URL;
 
-
+//  1. get multiple subscriptions that :
+//          1.1 subscribed to the same Broker;
+//          1.2 with same topic;
+//          1.3 but have different constraints.
+//  2. Testing
+//          2.1 test case1: constraints1 = someID, and constraints2 = someIDE==> different constraints have intersection.
+//                  return threshold = someID ==> the larger scopt
+//          2.2 test case2: constraints1 = alice, and constraints = bob ==> No intersection
+//                  return threshold = alice || bob
 public class InferenceEngine {
-
-   // private String threshold;
     private static final Logger logger = LoggerFactory.getLogger(BrokerService.class);
+    private static MetricsCollector metricsCollector = new MetricsCollector();
 
     private Map<ActiveMQDestination, Map<String, String>> filterMap = new HashMap<>();
 
-    //  1. get multiple subscriptions that :
-    //          1.1 subscribed to the same Broker;
-    //          1.2 with same topic;
-    //          1.3 but have different constraints.
-    //  2. Testing
-    //          2.1 test case1: constraints1 = someID, and constraints2 = someIDE==> different constraints have intersection.
-    //                  return threshold = someID ==> the larger scopt
-    //          2.2 test case2: constraints1 = alice, and constraints = bob ==> No intersection
-    //                  return threshold = alice || bob
-    public void inferenceEngine(ActiveMQDestination destination, String selector, long time) {
+    public void inferenceEngine(ActiveMQDestination destination, String selector, long invocationTime) throws IOException {
+
+        //LogManager.getLogManager().readConfiguration(new FileInputStream("src/main/resources/logging.properties"));
 
         logger.debug("---------------- Got Consumer Selector Input ----------------");
         logger.debug(destination.getPhysicalName());
@@ -52,14 +57,12 @@ public class InferenceEngine {
         Map<String, String> selectorMap = new HashMap<>();
         selectorMap.put(property, constraints);
 
-
         if (filterMap.containsKey(destination)) {// there is already selector on this topic
             //compare current threshold with incoming selector
-            // current selector
+            //current selector
             logger.debug("current selector: " + filterMap.get(destination));
 
             if (filterMap.get(destination).containsKey(property)) {// there is already constraints for the given property
-                long startGenerateTime;
                 logger.debug("current constraints: " + filterMap.get(destination).get(property));
                 if (filterMap.get(destination).get(property).contains(constraints) && !filterMap.get(destination).get(property).equals(constraints)) {//someID contains some
                     filterMap.replace(destination, selectorMap);
@@ -68,11 +71,17 @@ public class InferenceEngine {
 
                     //Update Threshold to Meta Topic
                     publishThreshold(destination, filterMap.get(destination).toString());
-                    logger.info("Latency Updated Threshold is: {}", System.currentTimeMillis()-time);
+                    long updateFilterTime = System.nanoTime();
+                    logger.info("Updated Filter to Meta Topic at: {}",updateFilterTime);
+                    metricsCollector.logTimestamp("Updated Filter to Meta Topic at", updateFilterTime);
+
+                    logger.info("Latency of Updating Filter is: {}", updateFilterTime-invocationTime);
+                    metricsCollector.logTimestamp("Latency of Updating Filter is", updateFilterTime-invocationTime);
 
                     logger.debug("the updated filter Map is " + filterMap);
+
                 }//TODO: else{} if two thresholds are "Alice" and "Bob"
-            }
+            }//TODO: else need add new property
         } else {
             // if new item added! then publish
             filterMap.put(destination, selectorMap);
@@ -81,11 +90,17 @@ public class InferenceEngine {
 
             //Publish Threshold to Meta Topic
             publishThreshold(destination, filterMap.get(destination).toString());
-            logger.info("Latency to Publish the NEW Threshold is: {}", System.currentTimeMillis()-time);
+            long addFilterTime = System.nanoTime();
+
+            logger.info("Publish Filter to a NEW Meta Topic at: {}",addFilterTime);
+            metricsCollector.logTimestamp("Publish Filter to a New Meta Topic at", addFilterTime);
+
+            logger.info("Latency to Publish the NEW Threshold is: {}", System.nanoTime()-invocationTime);
+            metricsCollector.logTimestamp("Latency to Publish the NEW Threshold is", System.nanoTime()-invocationTime);
+
+
 
         }
-
-
     }
 
     public void publishThreshold(ActiveMQDestination originalDestination, String selector) {
@@ -111,13 +126,10 @@ public class InferenceEngine {
             //messageProducer.setDeliveryMode(DeliveryMode.PERSISTENT);
 
             TextMessage msg = session.createTextMessage(selector);
-            msg.setLongProperty("thresholdTimeSent", System.currentTimeMillis());
+            msg.setLongProperty("thresholdTimeSent", System.nanoTime());
 
             //The Time that Published the threshold to Meta Topic
-            //logger.info("The Time that Published the threshold to Meta Topic at: "+ System.currentTimeMillis());
             messageProducer.send(msg);
-
-            //logger.info("Threshold Send Successfully at: "+ System.currentTimeMillis());
             //messageProducer.send(msg,2,0, Long.MAX_VALUE);//message, persistent, priority, ttl
 
             logger.debug("Sent Threshold: " + msg.getText() + " to Filter Topic: " + filterTopic);

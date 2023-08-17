@@ -8,13 +8,14 @@ import javax.jms.*;
 import static org.example.cong.Configuration.BROKER_URL;
 import static org.example.cong.Configuration.DESTINATION;
 
-public class SimpleSubscriber {
+public class SubscriberPSF {
 
         private static MetricsCollector metricsCollector = new MetricsCollector();
 
-        public static void main(String[] args) throws Exception {
-            ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(BROKER_URL);
+        public static void subPSF(String broker_url, String dest, String name) throws Exception {
+            ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(broker_url);
             Connection connection = null;
+
             Session session = null;
             MessageConsumer messageConsumer1 = null;
             MessageConsumer messageConsumer2 = null;
@@ -23,9 +24,11 @@ public class SimpleSubscriber {
 
             try {
                 connection = activeMQConnectionFactory.createConnection();
+                connection.setClientID(name);
+
                 session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
-                Destination destination = session.createTopic(DESTINATION);
+                Destination destination = session.createTopic(dest);
 
                 messageConsumer1 = session.createConsumer(destination, "messageContent='someID'", false);
                 messageConsumer2 = session.createConsumer(destination, "messageContent='some'", false);

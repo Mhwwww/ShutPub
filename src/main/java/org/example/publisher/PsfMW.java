@@ -2,6 +2,7 @@ package org.example.publisher;
 
 import org.apache.activemq.broker.BrokerService;
 import org.apache.activemq.command.ActiveMQDestination;
+import org.example.MetricsCollector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,22 +21,18 @@ public class PsfMW {
     //private Map<MessageProducer, AtomicReference<Message>> producerThresholdMap = new HashMap<>();
     private AtomicReference<String> threshold = new AtomicReference<>(null);
     private static final Logger logger = LoggerFactory.getLogger(BrokerService.class);
-
     private String currentSelector = null;
 
+    private static MetricsCollector metricsCollector = new MetricsCollector();
 
     public void subToFilter(MessageProducer producer, Session session, Connection connection) {
         try {
             ActiveMQDestination pubDestination = ActiveMQDestination.transform(producer.getDestination());
-
             String fiterDestination = "filter/" + pubDestination.getPhysicalName();
             logger.debug(fiterDestination);
-
             Topic filterTopic = session.createTopic(fiterDestination);
-            //do not need to be the durable
-            //TopicSubscriber filterSubscriber = session.createDurableSubscriber(filterTopic, fiterDestination);
             MessageConsumer filterSubscriber = session.createConsumer(filterTopic);
-
+            //TopicSubscriber filterSubscriber = session.createDurableSubscriber(filterTopic, fiterDestination);
             connection.start();
 
             //map filterTopic with currentThreshold
@@ -44,64 +41,48 @@ public class PsfMW {
                 if (message1 instanceof TextMessage) {
                     try {
                         String result = ((TextMessage) message1).getText();
-                        //the time that publisher middleware receives a threshold
-                        long gotThresholdTime =System.currentTimeMillis();
-                        logger.debug("we got the threshold" + result);
-                        logger.info("{}: Got Threshold at: {}, Threshold arriving latency is: {}", connection.getClientID(), gotThresholdTime, gotThresholdTime- message1.getLongProperty("thresholdTimeSent") );
+                        long gotThresholdTime = System.nanoTime();
+                        logger.info("{}: Got Threshold {} at: {}, Threshold arriving latency is: {}", connection.getClientID(), result, gotThresholdTime, gotThresholdTime - message1.getLongProperty("thresholdTimeSent"));
+                        metricsCollector.logMiddlewareFilterTimestamp(connection.getClientID(), "Middleware Receives the Filter at", gotThresholdTime, "filter sent time is: ", message1.getLongProperty("thresholdTimeSent") );
 
-                        //TODO: not sure whether still need this
                         if (!Objects.equals(currentSelector, result)) {
                             logger.debug("Threshold changed, New threshold is: " + result);
                             currentSelector = result;
                         } else {
                             logger.debug("No changes in threshold");
                         }
-
                     } catch (JMSException e) {
                         throw new RuntimeException(e);
                     }
-
                 }
             });
-
         } catch (JMSException e) {
             throw new RuntimeException(e);
         }
-
     }
 
     /*
      * middleware publisher
      * */
 
-    public void fiter(MessageProducer producer, TextMessage msg) {
-        // using currentThreshold for the incoming messages
-        try {
-            // 1. if the threshold does not change, then use the currentThreshold
-            if (currentSelector == null) {
+    public void fiter(MessageProducer producer, TextMessage msg) throws JMSException {
+        if (currentSelector == null) {
+            producer.send(msg);
+            logger.info("!!NO FILTER!! Sent Message: {} to broker with latency: {}", msg.getText(), System.nanoTime() - msg.getLongProperty("timeSent"));
+            metricsCollector.logNoFilterMsgTimestamp("NO FILTER, msg sent at", System.nanoTime(), "the msg content is", msg.getText(), "the msg was generated at", msg.getLongProperty("timeSent"));
+        } else {
+            String[] result = currentSelector.substring(1, currentSelector.length() - 1).split("=");
+            String property = result[0];
+            String constraints = result[1];
+
+            if (msg.propertyExists(property) && msg.getStringProperty(property).contains(constraints)) {// filter unmatched msgs
                 producer.send(msg);
-                logger.info("!!NO FILTER!! Sent Message: {} to broker with latency: {}" ,msg.getText(), System.currentTimeMillis()-msg.getLongProperty("timeSent"));
+                //logger.info("Filtered Msg latency: {} ", System.nanoTime()-msg.getLongProperty("timeSent"));
 
-
-            } else {
-                String[] result = currentSelector.substring(1, currentSelector.length() - 1).split("=");
-                String property = result[0];
-                String constraints = result[1];
-
-                if (msg.propertyExists(property) && msg.getStringProperty(property).contains(constraints)) {// filter unmatched msgs
-
-                    producer.send(msg);
-                    //logger.info("Filtered Msg latency: {} ", System.currentTimeMillis()-msg.getLongProperty("timeSent"));
-
-                    logger.info("Actual Sent Message is: {}, the latency is: {}, the message property is: {}, the currentThreshold is: {}" , msg.getText() , System.currentTimeMillis()-msg.getLongProperty("timeSent"), msg.getStringProperty(property) , currentSelector);
-                }
-
+                logger.info("Actual Sent Message is: {}, the latency is: {}, the message property is: {}, the currentThreshold is: {}", msg.getText(), System.nanoTime() - msg.getLongProperty("timeSent"), msg.getStringProperty(property), currentSelector);
+                metricsCollector.logFilterMsgTimestamp("Actural Sent Msg at ",System.nanoTime(),"Msg content is ", msg.getText(), "this msg is generated at ", msg.getLongProperty("timeSent"), "the msg property and current filter are ", msg.getStringProperty(property), currentSelector);
             }
-
-        } catch (JMSException e) {
-            throw new RuntimeException(e);
         }
-
     }
-
 }
+

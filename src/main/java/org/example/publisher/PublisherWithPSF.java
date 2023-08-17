@@ -2,10 +2,14 @@ package org.example.publisher;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.broker.BrokerService;
+import org.example.MetricsCollector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.jms.*;
+
+import static org.example.cong.Configuration.MESSAGE_INTERVAL;
+import static org.example.cong.Configuration.MESSAGE_NUM;
 //forward messages to middlerware, with its destinationTopic and messages
 
 public class PublisherWithPSF {
@@ -14,6 +18,7 @@ public class PublisherWithPSF {
     //      2.3 when there are subscribed 'threshold', mw will fiter the incoming messages then send results to Destination.
 
     private static final Logger logger = LoggerFactory.getLogger(BrokerService.class);
+    private static MetricsCollector metricsCollector = new MetricsCollector();
 
     public static void startProducer(String brokerUrl, String dest, String name) {
         Connection connection = null;
@@ -34,18 +39,13 @@ public class PublisherWithPSF {
             PsfMW mw = new PsfMW();
             mw.subToFilter(messageProducer, session, connection);
 
-            for (int i = 1; i < 51; i++) {
-                TextMessage message1 = session.createTextMessage(connection.getClientID() + " send: SomeID text message" + i);
-                message1.setStringProperty("messageContent", "someID");
-                message1.setLongProperty("timeSent", System.currentTimeMillis());
-                mw.fiter(messageProducer, message1);
+            for (int i = 1; i < MESSAGE_NUM+1; i++) {
+                Thread.sleep(MESSAGE_INTERVAL);
+                sendTextMsg(session, connection, mw, messageProducer, "someID",i);
+                sendTextMsg(session, connection, mw, messageProducer, "noID",i);
+                sendTextMsg(session, connection, mw, messageProducer, "randomID",i);
+                sendTextMsg(session, connection, mw, messageProducer, "abcdefg",i);
 
-                TextMessage message2 = session.createTextMessage(connection.getClientID() + " send: NoID text message" + i);
-                message2.setStringProperty("messageContent", "noID");
-                message2.setLongProperty("timeSent", System.currentTimeMillis());
-                mw.fiter(messageProducer, message2);
-
-                Thread.sleep(300);
             }
 
         } catch (JMSException e) {
@@ -70,6 +70,18 @@ public class PublisherWithPSF {
             }
 
         }
+
+    }
+
+    public static void sendTextMsg(Session session, Connection connection, PsfMW mw, MessageProducer messageProducer, String property, int i) throws JMSException {
+
+        TextMessage message = session.createTextMessage(connection.getClientID() + " send: "+ property +" message " + i);
+        message.setStringProperty("messageContent", property);
+        message.setLongProperty("timeSent", System.nanoTime());
+        metricsCollector.logPlanMsg("Plan to sent Msg at ", System.nanoTime(),"Msg Content is ", message.getText());
+
+        //mw.subToFilter(messageProducer, session, connection, message2);
+        mw.fiter(messageProducer, message);
 
     }
 
