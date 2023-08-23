@@ -33,7 +33,7 @@ public class SubscriberPSF {
                 messageConsumer1 = session.createConsumer(destination, "messageContent='someID'", false);
                 messageConsumer2 = session.createConsumer(destination, "messageContent='some'", false);
                 messageConsumer3 = session.createConsumer(destination, "messageContent='som'", false);
-                messageConsumer4 = session.createConsumer(destination, "messageContent='someI'", false);
+                messageConsumer4 = session.createConsumer(destination, "messageContent='so'", false);
 
                 connection.start();
 

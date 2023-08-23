@@ -10,7 +10,7 @@ import static org.example.cong.Configuration.*;
 public class MetricsCollector {
 
     //static File f = new File("metrics-" + System.currentTimeMillis() + ".csv");
-    static File f = new File("./src/main/java/org/example/eva/logs/Pub_"+PRODUCER_NUM+"_Msg_"+MESSAGE_NUM+"_"+System.currentTimeMillis()+ ".csv");
+    static File f = new File("./src/main/java/org/example/eva/logs/Pub_"+PRODUCER_NUM+"_Msg_"+MESSAGE_NUM+"_MI_"+MESSAGE_INTERVAL+"_PI_"+PRODUCER_INTERVAL+"_BI_"+System.currentTimeMillis()+ ".csv");
 //    static File f = new File("./src/main/java/org/example/eva/logs/Sub_"+CONSUMER_NUM+System.currentTimeMillis()+ ".csv");
 
 
