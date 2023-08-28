@@ -7,7 +7,7 @@ public class Configuration {
     public static String DESTINATION = "targetTopic";
 
     public  static int BROKER_INTERVAL = 90;
-    public static int PRODUCER_NUM = 1000;
+    public static int PRODUCER_NUM = 1500;
     public static int MESSAGE_NUM = 375;
 
     public  static int MESSAGE_INTERVAL = 300;
