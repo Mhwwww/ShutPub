@@ -12,7 +12,7 @@ import javax.jms.*;
 public class Publisher
 {
     public  static final String BROKER_URL = "tcp://localhost:61616";
-    public static final String DESTINATION = "topic";
+    public static final String DESTINATION = "targetTopic.#";
 
     public static void main( String[] args ) {
         Connection connection = null;

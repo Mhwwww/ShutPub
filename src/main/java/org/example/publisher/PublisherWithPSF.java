@@ -28,7 +28,8 @@ public class PublisherWithPSF {
         ActiveMQConnectionFactory activeMQConnectionFactory = new ActiveMQConnectionFactory(brokerUrl);
         try {
             connection = activeMQConnectionFactory.createConnection();
-            connection.setClientID("filter_" + dest + "_" + name);
+            connection.setClientID("filter/" + dest + "/" + name);
+
             session = connection.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
             Destination destination = session.createTopic(dest);
             //Message msg = session.createTextMessage("TESTING");

@@ -3,7 +3,6 @@ package org.example.broker;
 import org.apache.activemq.broker.*;
 import org.example.broker.connectionManager.ConnectionManager;
 
-
 import static org.example.cong.Configuration.BROKER_INTERVAL;
 import static org.example.cong.Configuration.BROKER_URL;
 

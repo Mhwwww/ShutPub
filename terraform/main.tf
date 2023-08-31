@@ -19,7 +19,6 @@ provider "google" {
 #create a Virtual Private Cloud (VPC) network and subnet for the VM's network interface.
 resource "google_compute_network" "vpc_network" {
   name = "psf-network"
-
   auto_create_subnetworks = false
 }
 
@@ -72,6 +71,8 @@ resource "google_compute_instance" "subscriber" {
   name         = "psf-subscriber-vm"
   machine_type = "e2-standard-2"
   zone = "europe-west9-a"
+  tags = ["ssh", "app"]
+
 
   boot_disk {
     initialize_params {
@@ -97,6 +98,7 @@ resource "google_compute_instance" "publisher" {
   name         = "psf-publisher-vm"
   machine_type = "e2-standard-2"
   zone = "europe-southwest1-b"
+  tags = ["ssh", "app"]
 
   boot_disk {
     initialize_params {

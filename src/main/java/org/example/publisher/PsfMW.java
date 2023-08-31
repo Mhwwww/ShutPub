@@ -28,8 +28,10 @@ public class PsfMW {
     public void subToFilter(MessageProducer producer, Session session, Connection connection) {
         try {
             ActiveMQDestination pubDestination = ActiveMQDestination.transform(producer.getDestination());
-            String fiterDestination = "filter/" + pubDestination.getPhysicalName();
-            logger.debug(fiterDestination);
+//            String fiterDestination = "filter/" + pubDestination.getPhysicalName();
+            String fiterDestination = connection.getClientID();
+            logger.error(fiterDestination);
+
             Topic filterTopic = session.createTopic(fiterDestination);
             MessageConsumer filterSubscriber = session.createConsumer(filterTopic);
             //TopicSubscriber filterSubscriber = session.createDurableSubscriber(filterTopic, fiterDestination);

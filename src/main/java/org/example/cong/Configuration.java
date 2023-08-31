@@ -6,11 +6,11 @@ public class Configuration {
 //    public static final String BROKER_URL = "tcp://broker-container:61616";
     public static String DESTINATION = "targetTopic";
 
-    public  static int BROKER_INTERVAL = 90;
-    public static int PRODUCER_NUM = 1500;
-    public static int MESSAGE_NUM = 375;
+    public  static int BROKER_INTERVAL = 100;
+    public static int PRODUCER_NUM = 2000;
+    public static int MESSAGE_NUM = 300;
 
-    public  static int MESSAGE_INTERVAL = 300;
+    public  static int MESSAGE_INTERVAL = 100;
     public  static int PRODUCER_INTERVAL = 500;
 
     public static int CONSUMER_NUM = 400;
