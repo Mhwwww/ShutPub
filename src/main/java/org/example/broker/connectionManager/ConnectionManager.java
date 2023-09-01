@@ -29,9 +29,7 @@ public class ConnectionManager {
 
     public void connectionManager(BrokerService broker) {
         try {
-            if (broker.getCurrentConnections() > 0) {
-                //if (broker.getBroker().getDestinationMap().size() != 0) {
-
+            if (broker.getCurrentConnections() > 0) {//there is at least either one publisher or one subscriber
                 Map<ActiveMQDestination, Destination> destMap = broker.getBroker().getDestinationMap();
                 Map<ActiveMQDestination, Destination> subMap = nonFilterConsumerMap(destMap);
 
@@ -41,8 +39,7 @@ public class ConnectionManager {
                     currentConnection = broker.getCurrentConnections();
                 }
 
-                if (broker.getCurrentConnections() > currentConnection) {
-                    // There is a new client connected to the broker
+                if (broker.getCurrentConnections() > currentConnection) {// There is a new client connected to the broker
                     long newClientTime = System.nanoTime();
                     logger.info("--------------New Client Arrived at: {}--------------", newClientTime);
                     metricsCollector.logTimestamp("New Client Arrived at", newClientTime);
@@ -50,71 +47,54 @@ public class ConnectionManager {
                     currentConnection = broker.getCurrentConnections();
                     currentSubNum = getSubscriptionNum(subMap);
 
-//                    logger.error(String.valueOf(subMap.size()));
-//                    logger.error(String.valueOf(currentSubNum));
-//                    logger.error(String.valueOf(subscriptionNum));
-
-
-                    // if there is a consumer, and more subscriptions --> a new consumer
-                    if (subMap.size() != 0 && currentSubNum > subscriptionNum) {
-                        //This New Client is a SimpleSubscriber
+                    if (subMap.size() != 0 && currentSubNum > subscriptionNum) {// if there is a consumer, and more subscriptions --> a new consumer
                         long subFoundTime = System.nanoTime();
                         logger.info("A New Subscriber is Identified at: {}", subFoundTime);
                         metricsCollector.logTimestamp("A New Subscriber is Identified at", subFoundTime);
 
+                        //todo: write into log?
                         logger.info("Subscriber Identification Latency is: {}", subFoundTime - newClientTime);
                         subscriptionNum = currentSubNum;
+                        logger.info("-------------------------------------------------------");
 
-                        logger.debug("-------------------------------------------------------");
                         for (Map.Entry<ActiveMQDestination, Destination> entry : subMap.entrySet()) {
                             ActiveMQDestination key = entry.getKey();
                             Destination value = entry.getValue();
 
-                            if (value.getConsumers().size() != 0) {
-                                //call the inference engine
+                            if (value.getConsumers().size() != 0) {//call the inference engine
                                 logger.debug("this not-meta consumer " + key.getPhysicalName() + " has " + value.getConsumers().size() + " subscription");
 
                                 List<Subscription> consumer = value.getConsumers();
 
                                 for (int i = 0; i < consumer.size(); i++) {
                                     ConsumerInfo consumerInfo = consumer.get(i).getConsumerInfo();
-                                    //topic--ActiveMQDestination
-                                    ActiveMQDestination destination = consumerInfo.getDestination();
-                                    //filter--String
-                                    String selector = consumerInfo.getSelector();
+                                    ActiveMQDestination destination = consumerInfo.getDestination();//topic--ActiveMQDestination
+                                    String selector = consumerInfo.getSelector();//filter--String
 
-                                    //consumer id--ConsumerID; consumerInfo.getConsumerId();
-                                    //System.out.println("Consumer Destination: " + consumerInfo.getDestination() + " ,Consumer Selector: " + consumerInfo.getSelector());
-
-                                    //1. get "selector & topic"; 2. update threshold for filter topic in "inference engine".
                                     if (selector != null) {
-                                        logger.debug("********* This consumer has a selector, Send metadata to Inference Engine *********");
-
-                                        //Time To Call the Inference Engine
+                                        logger.info("********* This consumer has a selector, Send metadata to Inference Engine *********");
                                         logger.info("Start Generating Threshold at: {}", System.nanoTime());
                                         metricsCollector.logTimestamp("Start Generating Threshold at", System.nanoTime());
 
+                                        //todo: current: either update or add new threshold will return the current threshold
                                         String thresholdUpdated = inferenceEngine.inferenceEngine(destination, selector, System.nanoTime());
 
                                         if(thresholdUpdated!=null){
+                                            System.out.println("There is a threshold, and we need to update the current value now!!");
+                                            // the publishers that already get threshold, and need to get the updated threshold
                                             Map<ActiveMQDestination, Destination> metaPubMap = publisherMap(destMap);
 
                                             for (Map.Entry<ActiveMQDestination, Destination> entry1 : metaPubMap.entrySet()) {
                                                 ActiveMQDestination metaPubKey = entry1.getKey();
-                                                Destination metaPubValue = entry1.getValue();
 
                                                 inferenceEngine.publishThreshold(metaPubKey, thresholdUpdated);
 
                                             }
                                         }
-
-
                                     } else {
                                         logger.debug("This subscription does NOT have a selector ");
                                     }
                                 }
-
-
                             }
                         }
                         //Finish Operations on the New Connected SimpleSubscriber
@@ -188,17 +168,30 @@ public class ConnectionManager {
                     System.out.println("------------real name------------" + realName);
                     checkName = realName.split("/")[1];
                     System.out.println("------------check name------------" + checkName);
+
+                    long startCheckTime = System.nanoTime();
+                    logger.info("Start to Check Filter Existence for the Late Publisher at: {}", startCheckTime);
+                    metricsCollector.logTimestamp("Start to Check Filter Existence for the Late Publisher at", startCheckTime);
+
                     Boolean ifExist = inferenceEngine.isThresholdExist(checkName, realName);
+
+                    long finishCheckTime = System.nanoTime();
+                    logger.info("Finish Checking Filter Existence at: {}", finishCheckTime);
+                    metricsCollector.logTimestamp("Finish Checking Filter Existence at: ", finishCheckTime);
+                    metricsCollector.logTimestamp("Checking Latency is", finishCheckTime - startCheckTime);
+                    logger.info("Checking Latency is: {}", finishCheckTime - startCheckTime);
+
 
                     if (ifExist) {
                         System.out.println("there is a threshold for this publisher, publish this threshold again.");
                     } else {
                         System.out.println("there is no threshold for this publisher.");
                     }
-
                 } else {
-                    metaPubMap.put(key, value);
-                    //todo: if updated?
+                    String pubRealName = key.getPhysicalName().replace(AdvisorySupport.TOPIC_CONSUMER_ADVISORY_TOPIC_PREFIX, "");
+                    ActiveMQDestination dest = new ActiveMQTopic(pubRealName);
+
+                    metaPubMap.put(dest, value);
                 }
             }
         }
