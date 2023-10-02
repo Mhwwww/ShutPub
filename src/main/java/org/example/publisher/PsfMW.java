@@ -22,12 +22,10 @@ public class PsfMW {
     private AtomicReference<String> threshold = new AtomicReference<>(null);
     private static final Logger logger = LoggerFactory.getLogger(BrokerService.class);
     private String currentSelector = null;
-
     private static MetricsCollector metricsCollector = new MetricsCollector();
-
-    public void subToFilter(MessageProducer producer, Session session, Connection connection) {
+    public void subToFilter(Session session, Connection connection) {
         try {
-            ActiveMQDestination pubDestination = ActiveMQDestination.transform(producer.getDestination());
+            //ActiveMQDestination pubDestination = ActiveMQDestination.transform(producer.getDestination());
 //            String fiterDestination = "filter/" + pubDestination.getPhysicalName();
             String fiterDestination = connection.getClientID();
             logger.error(fiterDestination);
@@ -43,12 +41,12 @@ public class PsfMW {
                 if (message1 instanceof TextMessage) {
                     try {
                         String result = ((TextMessage) message1).getText();
-                        long gotThresholdTime = System.nanoTime();
+                        long gotThresholdTime = System.currentTimeMillis();
                         logger.info("{}: Got Threshold {} at: {}, Threshold arriving latency is: {}", connection.getClientID(), result, gotThresholdTime, gotThresholdTime - message1.getLongProperty("thresholdTimeSent"));
                         metricsCollector.logMiddlewareFilterTimestamp(connection.getClientID(), "Middleware Receives the Filter at", gotThresholdTime, "filter sent time is: ", message1.getLongProperty("thresholdTimeSent") );
 
                         if (!Objects.equals(currentSelector, result)) {
-                            logger.debug("Threshold changed, New threshold is: " + result);
+                            logger.info("Threshold changed, New threshold is: " + result);
                             currentSelector = result;
                         } else {
                             logger.debug("No changes in threshold");
@@ -70,19 +68,23 @@ public class PsfMW {
     public void fiter(MessageProducer producer, TextMessage msg) throws JMSException {
         if (currentSelector == null) {
             producer.send(msg);
-            logger.info("!!NO FILTER!! Sent Message: {} to broker with latency: {}", msg.getText(), System.nanoTime() - msg.getLongProperty("timeSent"));
-            metricsCollector.logNoFilterMsgTimestamp("NO FILTER, msg sent at", System.nanoTime(), "the msg content is", msg.getText(), "the msg was generated at", msg.getLongProperty("timeSent"));
+            logger.info("!!NO FILTER!! Sent Message: {} to broker with latency: {}", msg.getText(), System.currentTimeMillis() - msg.getLongProperty("timeSent"));
+            metricsCollector.logNoFilterMsgTimestamp("NO FILTER, msg sent at", System.currentTimeMillis(), "the msg content is", msg.getText(), "the msg was generated at", msg.getLongProperty("timeSent"));
         } else {
-            String[] result = currentSelector.substring(1, currentSelector.length() - 1).split("=");
-            String property = result[0];
-            String constraints = result[1];
+            //String[] result = currentSelector.substring(1, currentSelector.length() - 1).split("=");
+            //String property = result[0];
+            //String property = "messageContent";
+            //String constraints = result[1];
+            String constraints = currentSelector;
 
-            if (msg.propertyExists(property) && msg.getStringProperty(property).contains(constraints)) {// filter unmatched msgs
-                producer.send(msg);
-                //logger.info("Filtered Msg latency: {} ", System.nanoTime()-msg.getLongProperty("timeSent"));
+//            if (msg.propertyExists(property) && msg.getStringProperty(property).contains(constraints)) {// filter unmatched msgs
+            if (msg.propertyExists("messageContent") && msg.getStringProperty("messageContent").contains(constraints)) {// filter unmatched msgs
 
-                logger.info("Actual Sent Message is: {}, the latency is: {}, the message property is: {}, the currentThreshold is: {}", msg.getText(), System.nanoTime() - msg.getLongProperty("timeSent"), msg.getStringProperty(property), currentSelector);
-                metricsCollector.logFilterMsgTimestamp("Actural Sent Msg at ",System.nanoTime(),"Msg content is ", msg.getText(), "this msg is generated at ", msg.getLongProperty("timeSent"), "the msg property and current filter are ", msg.getStringProperty(property), currentSelector);
+            producer.send(msg);
+                //logger.info("Filtered Msg latency: {} ", System.currentTimeMillis()-msg.getLongProperty("timeSent"));
+
+                logger.info("Actual Sent Message is: {}, the latency is: {}, the message property is: {}, the currentThreshold is: {}", msg.getText(), System.currentTimeMillis() - msg.getLongProperty("timeSent"), msg.getStringProperty("messageContent"), currentSelector);
+                metricsCollector.logFilterMsgTimestamp("Actural Sent Msg at ",System.currentTimeMillis(),"Msg content is ", msg.getText(), "this msg is generated at ", msg.getLongProperty("timeSent"), "the msg property and current filter are ", msg.getStringProperty("messageContent"), currentSelector);
             }
         }
     }

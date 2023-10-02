@@ -48,8 +48,6 @@
           <version>2.30.0-SNAPSHOT</version>
       </dependency>
 
-
-
   </dependencies>
 
   <build>
@@ -63,6 +61,7 @@
           </descriptorRefs>
         </configuration>
         <executions>
+
           <execution>
             <id>Broker</id>
             <configuration>
@@ -79,6 +78,24 @@
               <goal>single</goal>
             </goals>
           </execution>
+
+          <execution>
+            <id>BrokerBaseline</id>
+            <configuration>
+              <appendAssemblyId>false</appendAssemblyId>
+              <finalName>BaselineBroker</finalName>
+              <archive>
+                <manifest>
+                  <mainClass>org.example.broker.BrokerBaseline</mainClass>
+                </manifest>
+              </archive>
+            </configuration>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+
           <execution>
             <id>Publisher</id>
             <configuration>
@@ -95,6 +112,24 @@
               <goal>single</goal>
             </goals>
           </execution>
+
+          <execution>
+            <id>PublisherBaseline</id>
+            <configuration>
+              <appendAssemblyId>false</appendAssemblyId>
+              <finalName>BaselinePublisher</finalName>
+              <archive>
+                <manifest>
+                  <mainClass>org.example.publisher.SimpleBaselinePublisher</mainClass>
+                </manifest>
+              </archive>
+            </configuration>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+
           <execution>
             <id>Subscriber</id>
             <configuration>
@@ -103,6 +138,23 @@
               <archive>
                 <manifest>
                   <mainClass>org.example.subscriber.SimpleSubscriber</mainClass>
+                </manifest>
+              </archive>
+            </configuration>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+
+          <execution>
+            <id>SubscriberPSF</id>
+            <configuration>
+              <appendAssemblyId>false</appendAssemblyId>
+              <finalName>SubscriberPSF</finalName>
+              <archive>
+                <manifest>
+                  <mainClass>org.example.subscriber.EvaFilterNumPSFSubscriber</mainClass>
                 </manifest>
               </archive>
             </configuration>

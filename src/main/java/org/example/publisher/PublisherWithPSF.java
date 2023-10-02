@@ -8,8 +8,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.jms.*;
 
-import static org.example.cong.Configuration.MESSAGE_INTERVAL;
-import static org.example.cong.Configuration.MESSAGE_NUM;
+import static org.example.cong.Configuration.*;
 //forward messages to middlerware, with its destinationTopic and messages
 
 public class PublisherWithPSF {
@@ -32,21 +31,41 @@ public class PublisherWithPSF {
 
             session = connection.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
             Destination destination = session.createTopic(dest);
-            //Message msg = session.createTextMessage("TESTING");
-
             //TODO: 1. create a normal publisher, and 2. creat a publisher-side middleware
             messageProducer = session.createProducer(destination);
 
             PsfMW mw = new PsfMW();
-            mw.subToFilter(messageProducer, session, connection);
+            mw.subToFilter(session, connection);
+//            mw.subToFilter(messageProducer, session, connection);
+            //TODO: make sure that every publisher could receive filter.
+            Thread.sleep(PUB_WAIT_TIME);
 
             for (int i = 1; i < MESSAGE_NUM+1; i++) {
-                Thread.sleep(MESSAGE_INTERVAL);
+                long startTime = System.currentTimeMillis();
                 sendTextMsg(session, connection, mw, messageProducer, "someID",i);
                 sendTextMsg(session, connection, mw, messageProducer, "noID",i);
                 sendTextMsg(session, connection, mw, messageProducer, "randomID",i);
                 sendTextMsg(session, connection, mw, messageProducer, "abcdefg",i);
+                sendTextMsg(session, connection, mw, messageProducer, "noID",i);
+                sendTextMsg(session, connection, mw, messageProducer, "randomID",i);
+                sendTextMsg(session, connection, mw, messageProducer, "abcdefg",i);
+                sendTextMsg(session, connection, mw, messageProducer, "noID",i);
+                sendTextMsg(session, connection, mw, messageProducer, "randomID",i);
+                sendTextMsg(session, connection, mw, messageProducer, "abcdefg",i);
+                long finishTime = System.currentTimeMillis();
 
+                long sendingTime = finishTime - startTime;
+
+                logger.error("Sending Duration: {}", sendingTime);
+                long sleepTime = MESSAGE_INTERVAL;
+                if (sendingTime > MESSAGE_INTERVAL){
+                    logger.error("We want to set MESSAGE INTERVAL to be: {}, but the sending time {} is **LONGER** than the INTERVAL", MESSAGE_INTERVAL, sendingTime);
+                    sleepTime = sendingTime;
+                }else {
+                    logger.info("Message Interval Could Be Applied");
+                }
+
+                Thread.sleep(sleepTime);
             }
 
         } catch (JMSException e) {
@@ -69,21 +88,18 @@ public class PublisherWithPSF {
             } catch (JMSException e) {
                 e.printStackTrace();
             }
-
         }
-
     }
 
     public static void sendTextMsg(Session session, Connection connection, PsfMW mw, MessageProducer messageProducer, String property, int i) throws JMSException {
 
         TextMessage message = session.createTextMessage(connection.getClientID() + " send: "+ property +" message " + i);
         message.setStringProperty("messageContent", property);
-        message.setLongProperty("timeSent", System.nanoTime());
-        metricsCollector.logPlanMsg("Plan to sent Msg at ", System.nanoTime(),"Msg Content is ", message.getText());
+        message.setLongProperty("timeSent", System.currentTimeMillis());
+        metricsCollector.logPlanMsg("Plan to sent Msg at ", System.currentTimeMillis(),"Msg Content is ", message.getText());
 
         //mw.subToFilter(messageProducer, session, connection, message2);
         mw.fiter(messageProducer, message);
-
     }
 
 

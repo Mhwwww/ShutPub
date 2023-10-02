@@ -28,6 +28,7 @@ public class ConnectionManager {
     private static MetricsCollector metricsCollector = new MetricsCollector();
 
     public void connectionManager(BrokerService broker) {
+
         try {
             if (broker.getCurrentConnections() > 0) {//there is at least either one publisher or one subscriber
                 Map<ActiveMQDestination, Destination> destMap = broker.getBroker().getDestinationMap();
@@ -35,12 +36,12 @@ public class ConnectionManager {
 
                 if (broker.getCurrentConnections() < currentConnection) {
                     System.out.println("------------------ A Client Disconnected ------------------");
-                    logger.debug("Client Disconnected Time: {}", System.nanoTime());
+                    logger.debug("Client Disconnected Time: {}", System.currentTimeMillis());
                     currentConnection = broker.getCurrentConnections();
                 }
 
                 if (broker.getCurrentConnections() > currentConnection) {// There is a new client connected to the broker
-                    long newClientTime = System.nanoTime();
+                    long newClientTime = System.currentTimeMillis();
                     logger.info("--------------New Client Arrived at: {}--------------", newClientTime);
                     metricsCollector.logTimestamp("New Client Arrived at", newClientTime);
 
@@ -48,7 +49,7 @@ public class ConnectionManager {
                     currentSubNum = getSubscriptionNum(subMap);
 
                     if (subMap.size() != 0 && currentSubNum > subscriptionNum) {// if there is a consumer, and more subscriptions --> a new consumer
-                        long subFoundTime = System.nanoTime();
+                        long subFoundTime = System.currentTimeMillis();
                         logger.info("A New Subscriber is Identified at: {}", subFoundTime);
                         metricsCollector.logTimestamp("A New Subscriber is Identified at", subFoundTime);
 
@@ -73,11 +74,10 @@ public class ConnectionManager {
 
                                     if (selector != null) {
                                         logger.info("********* This consumer has a selector, Send metadata to Inference Engine *********");
-                                        logger.info("Start Generating Threshold at: {}", System.nanoTime());
-                                        metricsCollector.logTimestamp("Start Generating Threshold at", System.nanoTime());
-
+                                        logger.info("Start Generating Threshold at: {}", System.currentTimeMillis());
+                                        metricsCollector.logTimestamp("Start Generating Threshold at", System.currentTimeMillis());
                                         //todo: current: either update or add new threshold will return the current threshold
-                                        String thresholdUpdated = inferenceEngine.inferenceEngine(destination, selector, System.nanoTime());
+                                        String thresholdUpdated = inferenceEngine.inferenceEngine(destination, selector, System.currentTimeMillis());
 
                                         if(thresholdUpdated!=null){
                                             System.out.println("There is a threshold, and we need to update the current value now!!");
@@ -98,20 +98,20 @@ public class ConnectionManager {
                             }
                         }
                         //Finish Operations on the New Connected SimpleSubscriber
-                        long subFinishTime = System.nanoTime();
+                        long subFinishTime = System.currentTimeMillis();
                         logger.info("Finish New Subscriber Related Operations at: {}", subFinishTime);
                         metricsCollector.logTimestamp("Finish New Subscriber Related Operations at", subFinishTime);
 
                         logger.info("Incoming Subscriber related Latency is: {}", subFinishTime - subFoundTime);
 
                     } else {//this is a publisher
-                        long pubFoundTime = System.nanoTime();
+                        long pubFoundTime = System.currentTimeMillis();
                         logger.info("Publisher Identification Latency is: {}", pubFoundTime - newClientTime);
-                        logger.info("New Publisher found at: {}", System.nanoTime());
+                        logger.info("New Publisher found at: {}", System.currentTimeMillis());
                         publisherMap(destMap);
 
                         //Finish Operations on the New Connected Publisher
-                        long pubFinishTime = System.nanoTime();
+                        long pubFinishTime = System.currentTimeMillis();
                         logger.info("Finish New Publisher Related Operations at: {}", pubFinishTime);
                         metricsCollector.logTimestamp("Finish New Publisher Related Operations at", pubFinishTime);
 
@@ -169,13 +169,13 @@ public class ConnectionManager {
                     checkName = realName.split("/")[1];
                     System.out.println("------------check name------------" + checkName);
 
-                    long startCheckTime = System.nanoTime();
+                    long startCheckTime = System.currentTimeMillis();
                     logger.info("Start to Check Filter Existence for the Late Publisher at: {}", startCheckTime);
                     metricsCollector.logTimestamp("Start to Check Filter Existence for the Late Publisher at", startCheckTime);
 
                     Boolean ifExist = inferenceEngine.isThresholdExist(checkName, realName);
 
-                    long finishCheckTime = System.nanoTime();
+                    long finishCheckTime = System.currentTimeMillis();
                     logger.info("Finish Checking Filter Existence at: {}", finishCheckTime);
                     metricsCollector.logTimestamp("Finish Checking Filter Existence at: ", finishCheckTime);
                     metricsCollector.logTimestamp("Checking Latency is", finishCheckTime - startCheckTime);
@@ -228,14 +228,14 @@ public class ConnectionManager {
 //            String checkName = realName.split("/")[1];
 //            System.out.println("------------check name------------"+checkName);
 //
-//            long startCheckTime = System.nanoTime();
+//            long startCheckTime = System.currentTimeMillis();
 //            logger.info("Start to Check Filter Existence for the Late Publisher at: {}", startCheckTime);
 //            metricsCollector.logTimestamp("Start to Check Filter Existence for the Late Publisher at", startCheckTime);
 //
 //
 //            Boolean ifExist = inferenceEngine.isThresholdExist(checkName,realName);
 //
-//            long finishCheckTime = System.nanoTime();
+//            long finishCheckTime = System.currentTimeMillis();
 //            logger.info("Finish Checking Filter Existence at: {}", finishCheckTime);
 //            metricsCollector.logTimestamp("Finish Checking Filter Existence at: ", finishCheckTime);
 //

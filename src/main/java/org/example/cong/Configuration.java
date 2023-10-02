@@ -1,20 +1,24 @@
 package org.example.cong;
 
 public class Configuration {
-    //Broker url and Topic for Simple Publisher and Simple Subscriber
+    //BrokerBaseline url and Topic for Simple Publisher and Simple Subscriber
     public static String BROKER_URL = "tcp://localhost:61616";
 //    public static final String BROKER_URL = "tcp://broker-container:61616";
     public static String DESTINATION = "targetTopic";
 
-    public  static int BROKER_INTERVAL = 200;
-    public static int PRODUCER_NUM = 5;
-    public static int MESSAGE_NUM = 100;
+    public  static int BROKER_INTERVAL = 100;
+    public static int PRODUCER_NUM = 100;
+    public static int MESSAGE_NUM = 10;
 
-    public  static int MESSAGE_INTERVAL = 100;
-    public  static int PRODUCER_INTERVAL = 500;
+    public  static int  PUB_WAIT_TIME = 1000;
 
-    public static int CONSUMER_NUM = 400;
-    public  static int CONSUMER_INTERVAL = 100;
+    public  static int MESSAGE_INTERVAL = 2000;
+    public  static int PRODUCER_INTERVAL = 0;
+
+    public static int CONSUMER_NUM = 20;
+    public  static int CONSUMER_INTERVAL = 1000;
+    public static int FILTER_NUM = 3;
+
 
     static {
         System.out.println("Hello from the Configuration init");
@@ -49,6 +53,12 @@ public class Configuration {
             System.out.println("Using non-default MESSAGE_INTERVAL:" + message_interval);
         }
 
+        String pub_wait_time = System.getenv("PSF_PUB_WAIT_TIME");
+        if (pub_wait_time != null) {
+            PUB_WAIT_TIME = Integer.parseInt(pub_wait_time);
+            System.out.println("Using non-default PUBLISHER WAIT TIME:" + pub_wait_time);
+        }
+
         String producer_interval = System.getenv("PSF_PRODUCER_INTERVAL");
         if (producer_interval != null) {
             PRODUCER_INTERVAL = Integer.parseInt(producer_interval);
@@ -66,6 +76,13 @@ public class Configuration {
             CONSUMER_INTERVAL = Integer.parseInt(consumer_interval);
             System.out.println("Using non-default CONSUMER_INTERVAL:" + consumer_interval);
         }
+
+        String filter_number = System.getenv("PSF_FILTER_NUM");
+        if (filter_number != null) {
+            FILTER_NUM = Integer.parseInt(filter_number);
+            System.out.println("Using non-default FILTER_NUM:" + filter_number);
+        }
+
     }
 
 }

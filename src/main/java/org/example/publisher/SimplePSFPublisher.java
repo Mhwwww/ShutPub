@@ -16,12 +16,12 @@ public class SimplePSFPublisher {
 
             String name = "psf_"+ i;
             Thread publisherThread = new Thread(() -> {
-                PublisherWithPSF psf = new PublisherWithPSF();
-                psf.startProducer(BROKER_URL, DESTINATION, name);
+                //PublisherWithPSF psf = new PublisherWithPSF();
+                PublisherWithPSF.startProducer(BROKER_URL, DESTINATION, name);
             });
             publisherThread.start();
 
-            Thread.sleep(PRODUCER_INTERVAL);
+            //Thread.sleep(PRODUCER_INTERVAL);
 
         }
     }

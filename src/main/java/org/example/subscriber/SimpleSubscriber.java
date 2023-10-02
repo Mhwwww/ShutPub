@@ -65,10 +65,10 @@ public class SimpleSubscriber {
                             break;
                         }
 
-                        long timeRev = System.nanoTime();
+                        long timeRev = System.currentTimeMillis();
                         long timeSent = messageReceived.getLongProperty("timeSent");
 
-                        System.out.println("Received Message with selector: " + messageConsumer.getMessageSelector() + ", at " + System.nanoTime());
+                        System.out.println("Received Message with selector: " + messageConsumer.getMessageSelector() + ", at " + System.currentTimeMillis());
                         System.out.println(timeRev - timeSent);
 
                         metricsCollector.logTimestamp("msgLatency", timeRev-timeSent);
