@@ -1,0 +1,3025 @@
+event,timestamp
+New Client Arrived at,1707388717428
+A New Subscriber is Identified at,1707388717429
+Start Generating Threshold at,1707388717431
+Publish Filter to a New Meta Topic at,1707388717431
+Latency to Publish the NEW Threshold is,0
+Finish New Subscriber Related Operations at,1707388717431
+New Client Arrived at,1707388736112
+Finish New Publisher Related Operations at,1707388736112
+New Client Arrived at,1707388736220
+Finish New Publisher Related Operations at,1707388736220
+New Client Arrived at,1707388736322
+Finish New Publisher Related Operations at,1707388736322
+New Client Arrived at,1707388736432
+Finish New Publisher Related Operations at,1707388736433
+New Client Arrived at,1707388736537
+Start to Check Filter Existence for the Late Publisher at,1707388736538
+Finish Checking Filter Existence at: ,1707388737209
+Checking Latency is,671
+Start to Check Filter Existence for the Late Publisher at,1707388737209
+Finish Checking Filter Existence at: ,1707388737212
+Checking Latency is,3
+Finish New Publisher Related Operations at,1707388737213
+New Client Arrived at,1707388737319
+Start to Check Filter Existence for the Late Publisher at,1707388737319
+Finish Checking Filter Existence at: ,1707388737324
+Checking Latency is,5
+Start to Check Filter Existence for the Late Publisher at,1707388737324
+Finish Checking Filter Existence at: ,1707388737327
+Checking Latency is,3
+Start to Check Filter Existence for the Late Publisher at,1707388737328
+Finish Checking Filter Existence at: ,1707388737331
+Checking Latency is,3
+Start to Check Filter Existence for the Late Publisher at,1707388737331
+Finish Checking Filter Existence at: ,1707388737333
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737334
+Finish Checking Filter Existence at: ,1707388737336
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737336
+Finish Checking Filter Existence at: ,1707388737338
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737338
+Finish Checking Filter Existence at: ,1707388737341
+Checking Latency is,3
+Start to Check Filter Existence for the Late Publisher at,1707388737341
+Finish Checking Filter Existence at: ,1707388737343
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737343
+Finish Checking Filter Existence at: ,1707388737346
+Checking Latency is,3
+Start to Check Filter Existence for the Late Publisher at,1707388737346
+Finish Checking Filter Existence at: ,1707388737348
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737348
+Finish Checking Filter Existence at: ,1707388737350
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737350
+Finish Checking Filter Existence at: ,1707388737352
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737352
+Finish Checking Filter Existence at: ,1707388737354
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737355
+Finish Checking Filter Existence at: ,1707388737357
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737357
+Finish Checking Filter Existence at: ,1707388737359
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737359
+Finish Checking Filter Existence at: ,1707388737361
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737361
+Finish Checking Filter Existence at: ,1707388737363
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737364
+Finish Checking Filter Existence at: ,1707388737366
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737366
+Finish Checking Filter Existence at: ,1707388737368
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737368
+Finish Checking Filter Existence at: ,1707388737369
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737370
+Finish Checking Filter Existence at: ,1707388737371
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737372
+Finish Checking Filter Existence at: ,1707388737374
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737374
+Finish Checking Filter Existence at: ,1707388737376
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737376
+Finish Checking Filter Existence at: ,1707388737378
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737378
+Finish Checking Filter Existence at: ,1707388737379
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737380
+Finish Checking Filter Existence at: ,1707388737381
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737381
+Finish Checking Filter Existence at: ,1707388737383
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737383
+Finish Checking Filter Existence at: ,1707388737385
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737385
+Finish Checking Filter Existence at: ,1707388737387
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737387
+Finish Checking Filter Existence at: ,1707388737389
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737389
+Finish Checking Filter Existence at: ,1707388737391
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737391
+Finish Checking Filter Existence at: ,1707388737393
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737393
+Finish Checking Filter Existence at: ,1707388737395
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737395
+Finish Checking Filter Existence at: ,1707388737397
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737397
+Finish Checking Filter Existence at: ,1707388737399
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737399
+Finish Checking Filter Existence at: ,1707388737401
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737401
+Finish Checking Filter Existence at: ,1707388737403
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737403
+Finish Checking Filter Existence at: ,1707388737405
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737405
+Finish Checking Filter Existence at: ,1707388737406
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737407
+Finish Checking Filter Existence at: ,1707388737408
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737409
+Finish Checking Filter Existence at: ,1707388737411
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737411
+Finish Checking Filter Existence at: ,1707388737413
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737413
+Finish Checking Filter Existence at: ,1707388737415
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737415
+Finish Checking Filter Existence at: ,1707388737417
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737417
+Finish Checking Filter Existence at: ,1707388737419
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737419
+Finish Checking Filter Existence at: ,1707388737421
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737421
+Finish Checking Filter Existence at: ,1707388737423
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737423
+Finish Checking Filter Existence at: ,1707388737425
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737425
+Finish Checking Filter Existence at: ,1707388737427
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737427
+Finish Checking Filter Existence at: ,1707388737429
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737429
+Finish Checking Filter Existence at: ,1707388737431
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737431
+Finish Checking Filter Existence at: ,1707388737433
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737433
+Finish Checking Filter Existence at: ,1707388737434
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737434
+Finish Checking Filter Existence at: ,1707388737436
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737436
+Finish Checking Filter Existence at: ,1707388737438
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737438
+Finish Checking Filter Existence at: ,1707388737440
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737440
+Finish Checking Filter Existence at: ,1707388737441
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737442
+Finish Checking Filter Existence at: ,1707388737443
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737443
+Finish Checking Filter Existence at: ,1707388737445
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737445
+Finish Checking Filter Existence at: ,1707388737446
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737446
+Finish Checking Filter Existence at: ,1707388737448
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737448
+Finish Checking Filter Existence at: ,1707388737450
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737450
+Finish Checking Filter Existence at: ,1707388737451
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737452
+Finish Checking Filter Existence at: ,1707388737453
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737453
+Finish Checking Filter Existence at: ,1707388737455
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737455
+Finish Checking Filter Existence at: ,1707388737456
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737456
+Finish Checking Filter Existence at: ,1707388737458
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737458
+Finish Checking Filter Existence at: ,1707388737460
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737460
+Finish Checking Filter Existence at: ,1707388737462
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737462
+Finish Checking Filter Existence at: ,1707388737464
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737464
+Finish Checking Filter Existence at: ,1707388737465
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737466
+Finish Checking Filter Existence at: ,1707388737467
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737468
+Finish Checking Filter Existence at: ,1707388737469
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737469
+Finish Checking Filter Existence at: ,1707388737471
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737471
+Finish Checking Filter Existence at: ,1707388737473
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737473
+Finish Checking Filter Existence at: ,1707388737475
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737475
+Finish Checking Filter Existence at: ,1707388737477
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737477
+Finish Checking Filter Existence at: ,1707388737478
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737478
+Finish Checking Filter Existence at: ,1707388737480
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737480
+Finish Checking Filter Existence at: ,1707388737481
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737481
+Finish Checking Filter Existence at: ,1707388737483
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737483
+Finish Checking Filter Existence at: ,1707388737485
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737485
+Finish Checking Filter Existence at: ,1707388737486
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737486
+Finish Checking Filter Existence at: ,1707388737488
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737488
+Finish Checking Filter Existence at: ,1707388737490
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737490
+Finish Checking Filter Existence at: ,1707388737492
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737492
+Finish Checking Filter Existence at: ,1707388737493
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737494
+Finish Checking Filter Existence at: ,1707388737495
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737495
+Finish Checking Filter Existence at: ,1707388737497
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737497
+Finish Checking Filter Existence at: ,1707388737499
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737499
+Finish Checking Filter Existence at: ,1707388737501
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737501
+Finish Checking Filter Existence at: ,1707388737502
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737503
+Finish Checking Filter Existence at: ,1707388737504
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737504
+Finish Checking Filter Existence at: ,1707388737506
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737506
+Finish Checking Filter Existence at: ,1707388737508
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737508
+Finish Checking Filter Existence at: ,1707388737509
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737510
+Finish Checking Filter Existence at: ,1707388737511
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737511
+Finish Checking Filter Existence at: ,1707388737513
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737513
+Finish Checking Filter Existence at: ,1707388737514
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737514
+Finish Checking Filter Existence at: ,1707388737516
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737516
+Finish Checking Filter Existence at: ,1707388737517
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737517
+Finish Checking Filter Existence at: ,1707388737519
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737519
+Finish Checking Filter Existence at: ,1707388737520
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737520
+Finish Checking Filter Existence at: ,1707388737522
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737522
+Finish Checking Filter Existence at: ,1707388737524
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737524
+Finish Checking Filter Existence at: ,1707388737525
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737525
+Finish Checking Filter Existence at: ,1707388737527
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737527
+Finish Checking Filter Existence at: ,1707388737529
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737529
+Finish Checking Filter Existence at: ,1707388737530
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737530
+Finish Checking Filter Existence at: ,1707388737532
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737532
+Finish Checking Filter Existence at: ,1707388737533
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737533
+Finish Checking Filter Existence at: ,1707388737535
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737535
+Finish Checking Filter Existence at: ,1707388737536
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737536
+Finish Checking Filter Existence at: ,1707388737538
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737538
+Finish Checking Filter Existence at: ,1707388737539
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737539
+Finish Checking Filter Existence at: ,1707388737541
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737541
+Finish Checking Filter Existence at: ,1707388737542
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737542
+Finish Checking Filter Existence at: ,1707388737544
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737544
+Finish Checking Filter Existence at: ,1707388737545
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737545
+Finish Checking Filter Existence at: ,1707388737547
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737547
+Finish Checking Filter Existence at: ,1707388737548
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737548
+Finish Checking Filter Existence at: ,1707388737550
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737550
+Finish Checking Filter Existence at: ,1707388737552
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737552
+Finish Checking Filter Existence at: ,1707388737553
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737553
+Finish Checking Filter Existence at: ,1707388737555
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737555
+Finish Checking Filter Existence at: ,1707388737558
+Checking Latency is,3
+Start to Check Filter Existence for the Late Publisher at,1707388737558
+Finish Checking Filter Existence at: ,1707388737560
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737560
+Finish Checking Filter Existence at: ,1707388737562
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737562
+Finish Checking Filter Existence at: ,1707388737563
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737563
+Finish Checking Filter Existence at: ,1707388737565
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737565
+Finish Checking Filter Existence at: ,1707388737567
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737567
+Finish Checking Filter Existence at: ,1707388737569
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737569
+Finish Checking Filter Existence at: ,1707388737570
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737570
+Finish Checking Filter Existence at: ,1707388737572
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737572
+Finish Checking Filter Existence at: ,1707388737574
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737574
+Finish Checking Filter Existence at: ,1707388737575
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737575
+Finish Checking Filter Existence at: ,1707388737577
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737577
+Finish Checking Filter Existence at: ,1707388737579
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737579
+Finish Checking Filter Existence at: ,1707388737581
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737581
+Finish Checking Filter Existence at: ,1707388737582
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737582
+Finish Checking Filter Existence at: ,1707388737584
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737584
+Finish Checking Filter Existence at: ,1707388737585
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737585
+Finish Checking Filter Existence at: ,1707388737587
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737587
+Finish Checking Filter Existence at: ,1707388737588
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737588
+Finish Checking Filter Existence at: ,1707388737590
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737590
+Finish Checking Filter Existence at: ,1707388737591
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737591
+Finish Checking Filter Existence at: ,1707388737593
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737593
+Finish Checking Filter Existence at: ,1707388737594
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737594
+Finish Checking Filter Existence at: ,1707388737596
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737596
+Finish Checking Filter Existence at: ,1707388737597
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737597
+Finish Checking Filter Existence at: ,1707388737599
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737599
+Finish Checking Filter Existence at: ,1707388737600
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737600
+Finish Checking Filter Existence at: ,1707388737601
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737601
+Finish Checking Filter Existence at: ,1707388737603
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737603
+Finish Checking Filter Existence at: ,1707388737605
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737605
+Finish Checking Filter Existence at: ,1707388737606
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737606
+Finish Checking Filter Existence at: ,1707388737608
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737608
+Finish Checking Filter Existence at: ,1707388737610
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737610
+Finish Checking Filter Existence at: ,1707388737612
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737612
+Finish Checking Filter Existence at: ,1707388737613
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737613
+Finish Checking Filter Existence at: ,1707388737614
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737615
+Finish Checking Filter Existence at: ,1707388737616
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737616
+Finish Checking Filter Existence at: ,1707388737617
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737617
+Finish Checking Filter Existence at: ,1707388737619
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737619
+Finish Checking Filter Existence at: ,1707388737620
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737620
+Finish Checking Filter Existence at: ,1707388737622
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737622
+Finish Checking Filter Existence at: ,1707388737623
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737623
+Finish Checking Filter Existence at: ,1707388737625
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737625
+Finish Checking Filter Existence at: ,1707388737626
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737627
+Finish Checking Filter Existence at: ,1707388737628
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737628
+Finish Checking Filter Existence at: ,1707388737629
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737629
+Finish Checking Filter Existence at: ,1707388737631
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737631
+Finish Checking Filter Existence at: ,1707388737632
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737632
+Finish Checking Filter Existence at: ,1707388737634
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737634
+Finish Checking Filter Existence at: ,1707388737636
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737636
+Finish Checking Filter Existence at: ,1707388737638
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737638
+Finish Checking Filter Existence at: ,1707388737639
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737639
+Finish Checking Filter Existence at: ,1707388737641
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737641
+Finish Checking Filter Existence at: ,1707388737643
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737643
+Finish Checking Filter Existence at: ,1707388737644
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737644
+Finish Checking Filter Existence at: ,1707388737646
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737646
+Finish Checking Filter Existence at: ,1707388737647
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737648
+Finish Checking Filter Existence at: ,1707388737649
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737649
+Finish Checking Filter Existence at: ,1707388737650
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737650
+Finish Checking Filter Existence at: ,1707388737652
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737652
+Finish Checking Filter Existence at: ,1707388737653
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737653
+Finish Checking Filter Existence at: ,1707388737654
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737654
+Finish Checking Filter Existence at: ,1707388737656
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737656
+Finish Checking Filter Existence at: ,1707388737658
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737658
+Finish Checking Filter Existence at: ,1707388737659
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737659
+Finish Checking Filter Existence at: ,1707388737661
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737661
+Finish Checking Filter Existence at: ,1707388737663
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737663
+Finish Checking Filter Existence at: ,1707388737665
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737665
+Finish Checking Filter Existence at: ,1707388737666
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737666
+Finish Checking Filter Existence at: ,1707388737667
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737667
+Finish Checking Filter Existence at: ,1707388737669
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737669
+Finish Checking Filter Existence at: ,1707388737670
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737670
+Finish Checking Filter Existence at: ,1707388737671
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737672
+Finish Checking Filter Existence at: ,1707388737673
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737673
+Finish Checking Filter Existence at: ,1707388737675
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737675
+Finish Checking Filter Existence at: ,1707388737676
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737676
+Finish Checking Filter Existence at: ,1707388737678
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737678
+Finish Checking Filter Existence at: ,1707388737679
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737679
+Finish Checking Filter Existence at: ,1707388737680
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737680
+Finish Checking Filter Existence at: ,1707388737682
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737682
+Finish Checking Filter Existence at: ,1707388737683
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737683
+Finish Checking Filter Existence at: ,1707388737685
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737685
+Finish Checking Filter Existence at: ,1707388737686
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737686
+Finish Checking Filter Existence at: ,1707388737687
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737687
+Finish Checking Filter Existence at: ,1707388737689
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737689
+Finish Checking Filter Existence at: ,1707388737691
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737691
+Finish Checking Filter Existence at: ,1707388737692
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737692
+Finish Checking Filter Existence at: ,1707388737693
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737693
+Finish Checking Filter Existence at: ,1707388737695
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737695
+Finish Checking Filter Existence at: ,1707388737696
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737696
+Finish Checking Filter Existence at: ,1707388737698
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737698
+Finish Checking Filter Existence at: ,1707388737699
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737699
+Finish Checking Filter Existence at: ,1707388737700
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737700
+Finish Checking Filter Existence at: ,1707388737702
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737702
+Finish Checking Filter Existence at: ,1707388737703
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737703
+Finish Checking Filter Existence at: ,1707388737704
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737704
+Finish Checking Filter Existence at: ,1707388737706
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737706
+Finish Checking Filter Existence at: ,1707388737708
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737708
+Finish Checking Filter Existence at: ,1707388737709
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737709
+Finish Checking Filter Existence at: ,1707388737710
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737710
+Finish Checking Filter Existence at: ,1707388737712
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737712
+Finish Checking Filter Existence at: ,1707388737713
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737713
+Finish Checking Filter Existence at: ,1707388737715
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737715
+Finish Checking Filter Existence at: ,1707388737716
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737716
+Finish Checking Filter Existence at: ,1707388737717
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737717
+Finish Checking Filter Existence at: ,1707388737719
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737719
+Finish Checking Filter Existence at: ,1707388737720
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737720
+Finish Checking Filter Existence at: ,1707388737721
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737721
+Finish Checking Filter Existence at: ,1707388737723
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737723
+Finish Checking Filter Existence at: ,1707388737724
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737724
+Finish Checking Filter Existence at: ,1707388737726
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737726
+Finish Checking Filter Existence at: ,1707388737727
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737727
+Finish Checking Filter Existence at: ,1707388737728
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737728
+Finish Checking Filter Existence at: ,1707388737730
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737730
+Finish Checking Filter Existence at: ,1707388737731
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737731
+Finish Checking Filter Existence at: ,1707388737732
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737732
+Finish Checking Filter Existence at: ,1707388737734
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737734
+Finish Checking Filter Existence at: ,1707388737735
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737735
+Finish Checking Filter Existence at: ,1707388737736
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737736
+Finish Checking Filter Existence at: ,1707388737738
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737738
+Finish Checking Filter Existence at: ,1707388737739
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737739
+Finish Checking Filter Existence at: ,1707388737741
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737741
+Finish Checking Filter Existence at: ,1707388737742
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737742
+Finish Checking Filter Existence at: ,1707388737744
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737744
+Finish Checking Filter Existence at: ,1707388737746
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737746
+Finish Checking Filter Existence at: ,1707388737747
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737748
+Finish Checking Filter Existence at: ,1707388737749
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737749
+Finish Checking Filter Existence at: ,1707388737751
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737751
+Finish Checking Filter Existence at: ,1707388737752
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737753
+Finish Checking Filter Existence at: ,1707388737754
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737754
+Finish Checking Filter Existence at: ,1707388737756
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737756
+Finish Checking Filter Existence at: ,1707388737757
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737757
+Finish Checking Filter Existence at: ,1707388737759
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737759
+Finish Checking Filter Existence at: ,1707388737760
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737760
+Finish Checking Filter Existence at: ,1707388737761
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737761
+Finish Checking Filter Existence at: ,1707388737763
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737763
+Finish Checking Filter Existence at: ,1707388737764
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737764
+Finish Checking Filter Existence at: ,1707388737765
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737765
+Finish Checking Filter Existence at: ,1707388737767
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737767
+Finish Checking Filter Existence at: ,1707388737768
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737768
+Finish Checking Filter Existence at: ,1707388737769
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737769
+Finish Checking Filter Existence at: ,1707388737771
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737771
+Finish Checking Filter Existence at: ,1707388737772
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737772
+Finish Checking Filter Existence at: ,1707388737774
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737774
+Finish Checking Filter Existence at: ,1707388737775
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737775
+Finish Checking Filter Existence at: ,1707388737776
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737776
+Finish Checking Filter Existence at: ,1707388737778
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737778
+Finish Checking Filter Existence at: ,1707388737779
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737779
+Finish Checking Filter Existence at: ,1707388737781
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737781
+Finish Checking Filter Existence at: ,1707388737782
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737782
+Finish Checking Filter Existence at: ,1707388737783
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737784
+Finish Checking Filter Existence at: ,1707388737785
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737785
+Finish Checking Filter Existence at: ,1707388737786
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737786
+Finish Checking Filter Existence at: ,1707388737788
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737788
+Finish Checking Filter Existence at: ,1707388737789
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737789
+Finish Checking Filter Existence at: ,1707388737791
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737791
+Finish Checking Filter Existence at: ,1707388737792
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737792
+Finish Checking Filter Existence at: ,1707388737793
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737793
+Finish Checking Filter Existence at: ,1707388737795
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737795
+Finish Checking Filter Existence at: ,1707388737796
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737796
+Finish Checking Filter Existence at: ,1707388737797
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737797
+Finish Checking Filter Existence at: ,1707388737799
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737799
+Finish Checking Filter Existence at: ,1707388737800
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737800
+Finish Checking Filter Existence at: ,1707388737801
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737801
+Finish Checking Filter Existence at: ,1707388737803
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737803
+Finish Checking Filter Existence at: ,1707388737804
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737804
+Finish Checking Filter Existence at: ,1707388737805
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737805
+Finish Checking Filter Existence at: ,1707388737807
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737807
+Finish Checking Filter Existence at: ,1707388737808
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737808
+Finish Checking Filter Existence at: ,1707388737810
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737810
+Finish Checking Filter Existence at: ,1707388737811
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737811
+Finish Checking Filter Existence at: ,1707388737812
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737812
+Finish Checking Filter Existence at: ,1707388737814
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737814
+Finish Checking Filter Existence at: ,1707388737815
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737815
+Finish Checking Filter Existence at: ,1707388737817
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737817
+Finish Checking Filter Existence at: ,1707388737818
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737818
+Finish Checking Filter Existence at: ,1707388737819
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737819
+Finish Checking Filter Existence at: ,1707388737821
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737821
+Finish Checking Filter Existence at: ,1707388737829
+Checking Latency is,8
+Start to Check Filter Existence for the Late Publisher at,1707388737829
+Finish Checking Filter Existence at: ,1707388737830
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737830
+Finish Checking Filter Existence at: ,1707388737832
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737832
+Finish Checking Filter Existence at: ,1707388737833
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737833
+Finish Checking Filter Existence at: ,1707388737835
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737835
+Finish Checking Filter Existence at: ,1707388737836
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737836
+Finish Checking Filter Existence at: ,1707388737837
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737837
+Finish Checking Filter Existence at: ,1707388737839
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737839
+Finish Checking Filter Existence at: ,1707388737840
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737840
+Finish Checking Filter Existence at: ,1707388737842
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737842
+Finish Checking Filter Existence at: ,1707388737843
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737843
+Finish Checking Filter Existence at: ,1707388737844
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737844
+Finish Checking Filter Existence at: ,1707388737845
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737845
+Finish Checking Filter Existence at: ,1707388737847
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737847
+Finish Checking Filter Existence at: ,1707388737849
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737849
+Finish Checking Filter Existence at: ,1707388737851
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737851
+Finish Checking Filter Existence at: ,1707388737852
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737853
+Finish Checking Filter Existence at: ,1707388737854
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737854
+Finish Checking Filter Existence at: ,1707388737855
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737855
+Finish Checking Filter Existence at: ,1707388737857
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737857
+Finish Checking Filter Existence at: ,1707388737858
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737858
+Finish Checking Filter Existence at: ,1707388737859
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737860
+Finish Checking Filter Existence at: ,1707388737861
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737861
+Finish Checking Filter Existence at: ,1707388737862
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737862
+Finish Checking Filter Existence at: ,1707388737863
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737863
+Finish Checking Filter Existence at: ,1707388737865
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737865
+Finish Checking Filter Existence at: ,1707388737866
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737866
+Finish Checking Filter Existence at: ,1707388737867
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737867
+Finish Checking Filter Existence at: ,1707388737869
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737869
+Finish Checking Filter Existence at: ,1707388737870
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737870
+Finish Checking Filter Existence at: ,1707388737871
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737871
+Finish Checking Filter Existence at: ,1707388737873
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737873
+Finish Checking Filter Existence at: ,1707388737874
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737874
+Finish Checking Filter Existence at: ,1707388737876
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737876
+Finish Checking Filter Existence at: ,1707388737877
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737877
+Finish Checking Filter Existence at: ,1707388737878
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737878
+Finish Checking Filter Existence at: ,1707388737879
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737879
+Finish Checking Filter Existence at: ,1707388737881
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737881
+Finish Checking Filter Existence at: ,1707388737882
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737882
+Finish Checking Filter Existence at: ,1707388737884
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737884
+Finish Checking Filter Existence at: ,1707388737885
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737885
+Finish Checking Filter Existence at: ,1707388737886
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737886
+Finish Checking Filter Existence at: ,1707388737888
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737888
+Finish Checking Filter Existence at: ,1707388737889
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737889
+Finish Checking Filter Existence at: ,1707388737891
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737891
+Finish Checking Filter Existence at: ,1707388737892
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737892
+Finish Checking Filter Existence at: ,1707388737893
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737894
+Finish Checking Filter Existence at: ,1707388737895
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737895
+Finish Checking Filter Existence at: ,1707388737896
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737896
+Finish Checking Filter Existence at: ,1707388737898
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737898
+Finish Checking Filter Existence at: ,1707388737899
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737899
+Finish Checking Filter Existence at: ,1707388737900
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737900
+Finish Checking Filter Existence at: ,1707388737902
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737902
+Finish Checking Filter Existence at: ,1707388737903
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737903
+Finish Checking Filter Existence at: ,1707388737904
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737904
+Finish Checking Filter Existence at: ,1707388737905
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737905
+Finish Checking Filter Existence at: ,1707388737907
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737907
+Finish Checking Filter Existence at: ,1707388737908
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737908
+Finish Checking Filter Existence at: ,1707388737909
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737909
+Finish Checking Filter Existence at: ,1707388737910
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737910
+Finish Checking Filter Existence at: ,1707388737911
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737911
+Finish Checking Filter Existence at: ,1707388737912
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737912
+Finish Checking Filter Existence at: ,1707388737914
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737914
+Finish Checking Filter Existence at: ,1707388737915
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737915
+Finish Checking Filter Existence at: ,1707388737916
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737916
+Finish Checking Filter Existence at: ,1707388737917
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737917
+Finish Checking Filter Existence at: ,1707388737918
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737918
+Finish Checking Filter Existence at: ,1707388737919
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737919
+Finish Checking Filter Existence at: ,1707388737921
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737921
+Finish Checking Filter Existence at: ,1707388737922
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737922
+Finish Checking Filter Existence at: ,1707388737924
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737924
+Finish Checking Filter Existence at: ,1707388737925
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737925
+Finish Checking Filter Existence at: ,1707388737926
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737926
+Finish Checking Filter Existence at: ,1707388737927
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737927
+Finish Checking Filter Existence at: ,1707388737929
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737929
+Finish Checking Filter Existence at: ,1707388737930
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737930
+Finish Checking Filter Existence at: ,1707388737931
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737931
+Finish Checking Filter Existence at: ,1707388737933
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737933
+Finish Checking Filter Existence at: ,1707388737935
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737935
+Finish Checking Filter Existence at: ,1707388737937
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737937
+Finish Checking Filter Existence at: ,1707388737939
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737939
+Finish Checking Filter Existence at: ,1707388737941
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737941
+Finish Checking Filter Existence at: ,1707388737942
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737942
+Finish Checking Filter Existence at: ,1707388737943
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737943
+Finish Checking Filter Existence at: ,1707388737945
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737945
+Finish Checking Filter Existence at: ,1707388737946
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737946
+Finish Checking Filter Existence at: ,1707388737947
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737947
+Finish Checking Filter Existence at: ,1707388737948
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737948
+Finish Checking Filter Existence at: ,1707388737950
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737950
+Finish Checking Filter Existence at: ,1707388737951
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737951
+Finish Checking Filter Existence at: ,1707388737952
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737952
+Finish Checking Filter Existence at: ,1707388737953
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737953
+Finish Checking Filter Existence at: ,1707388737955
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737955
+Finish Checking Filter Existence at: ,1707388737957
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737957
+Finish Checking Filter Existence at: ,1707388737958
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737958
+Finish Checking Filter Existence at: ,1707388737960
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737960
+Finish Checking Filter Existence at: ,1707388737961
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737961
+Finish Checking Filter Existence at: ,1707388737963
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737963
+Finish Checking Filter Existence at: ,1707388737964
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737964
+Finish Checking Filter Existence at: ,1707388737966
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737966
+Finish Checking Filter Existence at: ,1707388737967
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737967
+Finish Checking Filter Existence at: ,1707388737969
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737969
+Finish Checking Filter Existence at: ,1707388737970
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737970
+Finish Checking Filter Existence at: ,1707388737971
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737971
+Finish Checking Filter Existence at: ,1707388737973
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737973
+Finish Checking Filter Existence at: ,1707388737974
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737975
+Finish Checking Filter Existence at: ,1707388737976
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737976
+Finish Checking Filter Existence at: ,1707388737977
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737977
+Finish Checking Filter Existence at: ,1707388737978
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737978
+Finish Checking Filter Existence at: ,1707388737980
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737980
+Finish Checking Filter Existence at: ,1707388737981
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737981
+Finish Checking Filter Existence at: ,1707388737982
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737982
+Finish Checking Filter Existence at: ,1707388737983
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737983
+Finish Checking Filter Existence at: ,1707388737985
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737985
+Finish Checking Filter Existence at: ,1707388737986
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737986
+Finish Checking Filter Existence at: ,1707388737987
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737987
+Finish Checking Filter Existence at: ,1707388737989
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737989
+Finish Checking Filter Existence at: ,1707388737990
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737990
+Finish Checking Filter Existence at: ,1707388737992
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737992
+Finish Checking Filter Existence at: ,1707388737993
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737993
+Finish Checking Filter Existence at: ,1707388737995
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737995
+Finish Checking Filter Existence at: ,1707388737996
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737996
+Finish Checking Filter Existence at: ,1707388737997
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388737997
+Finish Checking Filter Existence at: ,1707388737999
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388737999
+Finish Checking Filter Existence at: ,1707388738000
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738000
+Finish Checking Filter Existence at: ,1707388738001
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738001
+Finish Checking Filter Existence at: ,1707388738003
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738003
+Finish Checking Filter Existence at: ,1707388738004
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738004
+Finish Checking Filter Existence at: ,1707388738005
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738005
+Finish Checking Filter Existence at: ,1707388738007
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738007
+Finish Checking Filter Existence at: ,1707388738008
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738008
+Finish Checking Filter Existence at: ,1707388738010
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738010
+Finish Checking Filter Existence at: ,1707388738011
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738011
+Finish Checking Filter Existence at: ,1707388738012
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738012
+Finish Checking Filter Existence at: ,1707388738013
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738013
+Finish Checking Filter Existence at: ,1707388738014
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738015
+Finish Checking Filter Existence at: ,1707388738016
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738016
+Finish Checking Filter Existence at: ,1707388738017
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738017
+Finish Checking Filter Existence at: ,1707388738018
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738018
+Finish Checking Filter Existence at: ,1707388738020
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738020
+Finish Checking Filter Existence at: ,1707388738021
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738021
+Finish Checking Filter Existence at: ,1707388738022
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738022
+Finish Checking Filter Existence at: ,1707388738024
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738024
+Finish Checking Filter Existence at: ,1707388738026
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738026
+Finish Checking Filter Existence at: ,1707388738027
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738027
+Finish Checking Filter Existence at: ,1707388738029
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738029
+Finish Checking Filter Existence at: ,1707388738030
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738030
+Finish Checking Filter Existence at: ,1707388738031
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738031
+Finish Checking Filter Existence at: ,1707388738033
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738033
+Finish Checking Filter Existence at: ,1707388738034
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738034
+Finish Checking Filter Existence at: ,1707388738035
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738035
+Finish Checking Filter Existence at: ,1707388738036
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738036
+Finish Checking Filter Existence at: ,1707388738038
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738038
+Finish Checking Filter Existence at: ,1707388738039
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738039
+Finish Checking Filter Existence at: ,1707388738041
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738041
+Finish Checking Filter Existence at: ,1707388738042
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738042
+Finish Checking Filter Existence at: ,1707388738043
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738043
+Finish Checking Filter Existence at: ,1707388738044
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738044
+Finish Checking Filter Existence at: ,1707388738045
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738045
+Finish Checking Filter Existence at: ,1707388738047
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738047
+Finish Checking Filter Existence at: ,1707388738048
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738048
+Finish Checking Filter Existence at: ,1707388738049
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738049
+Finish Checking Filter Existence at: ,1707388738050
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738050
+Finish Checking Filter Existence at: ,1707388738051
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738051
+Finish Checking Filter Existence at: ,1707388738052
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738052
+Finish Checking Filter Existence at: ,1707388738054
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738054
+Finish Checking Filter Existence at: ,1707388738055
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738055
+Finish Checking Filter Existence at: ,1707388738056
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738056
+Finish Checking Filter Existence at: ,1707388738057
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738057
+Finish Checking Filter Existence at: ,1707388738059
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738059
+Finish Checking Filter Existence at: ,1707388738060
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738060
+Finish Checking Filter Existence at: ,1707388738061
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738061
+Finish Checking Filter Existence at: ,1707388738062
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738062
+Finish Checking Filter Existence at: ,1707388738063
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738063
+Finish Checking Filter Existence at: ,1707388738064
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738064
+Finish Checking Filter Existence at: ,1707388738065
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738066
+Finish Checking Filter Existence at: ,1707388738067
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738067
+Finish Checking Filter Existence at: ,1707388738068
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738068
+Finish Checking Filter Existence at: ,1707388738069
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738069
+Finish Checking Filter Existence at: ,1707388738070
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738070
+Finish Checking Filter Existence at: ,1707388738071
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738071
+Finish Checking Filter Existence at: ,1707388738072
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738072
+Finish Checking Filter Existence at: ,1707388738074
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738074
+Finish Checking Filter Existence at: ,1707388738075
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738075
+Finish Checking Filter Existence at: ,1707388738076
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738076
+Finish Checking Filter Existence at: ,1707388738077
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738077
+Finish Checking Filter Existence at: ,1707388738078
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738078
+Finish Checking Filter Existence at: ,1707388738079
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738079
+Finish Checking Filter Existence at: ,1707388738080
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738080
+Finish Checking Filter Existence at: ,1707388738081
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738081
+Finish Checking Filter Existence at: ,1707388738083
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738083
+Finish Checking Filter Existence at: ,1707388738084
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738084
+Finish Checking Filter Existence at: ,1707388738085
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738085
+Finish Checking Filter Existence at: ,1707388738086
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738086
+Finish Checking Filter Existence at: ,1707388738087
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738087
+Finish Checking Filter Existence at: ,1707388738088
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738088
+Finish Checking Filter Existence at: ,1707388738089
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738089
+Finish Checking Filter Existence at: ,1707388738091
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738091
+Finish Checking Filter Existence at: ,1707388738092
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738092
+Finish Checking Filter Existence at: ,1707388738093
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738093
+Finish Checking Filter Existence at: ,1707388738094
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738094
+Finish Checking Filter Existence at: ,1707388738095
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738095
+Finish Checking Filter Existence at: ,1707388738097
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738097
+Finish Checking Filter Existence at: ,1707388738099
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738099
+Finish Checking Filter Existence at: ,1707388738100
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738101
+Finish Checking Filter Existence at: ,1707388738102
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738102
+Finish Checking Filter Existence at: ,1707388738104
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738104
+Finish Checking Filter Existence at: ,1707388738106
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738106
+Finish Checking Filter Existence at: ,1707388738108
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738108
+Finish Checking Filter Existence at: ,1707388738110
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738110
+Finish Checking Filter Existence at: ,1707388738111
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738112
+Finish Checking Filter Existence at: ,1707388738113
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738113
+Finish Checking Filter Existence at: ,1707388738114
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738114
+Finish Checking Filter Existence at: ,1707388738116
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738116
+Finish Checking Filter Existence at: ,1707388738117
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738117
+Finish Checking Filter Existence at: ,1707388738118
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738118
+Finish Checking Filter Existence at: ,1707388738119
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738119
+Finish Checking Filter Existence at: ,1707388738121
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738121
+Finish Checking Filter Existence at: ,1707388738122
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738122
+Finish Checking Filter Existence at: ,1707388738123
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738123
+Finish Checking Filter Existence at: ,1707388738125
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738125
+Finish Checking Filter Existence at: ,1707388738126
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738126
+Finish Checking Filter Existence at: ,1707388738127
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738127
+Finish Checking Filter Existence at: ,1707388738128
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738128
+Finish Checking Filter Existence at: ,1707388738129
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738129
+Finish Checking Filter Existence at: ,1707388738131
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738131
+Finish Checking Filter Existence at: ,1707388738132
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738132
+Finish Checking Filter Existence at: ,1707388738133
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738133
+Finish Checking Filter Existence at: ,1707388738134
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738134
+Finish Checking Filter Existence at: ,1707388738136
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738136
+Finish Checking Filter Existence at: ,1707388738137
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738137
+Finish Checking Filter Existence at: ,1707388738138
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738138
+Finish Checking Filter Existence at: ,1707388738140
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738140
+Finish Checking Filter Existence at: ,1707388738141
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738141
+Finish Checking Filter Existence at: ,1707388738142
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738142
+Finish Checking Filter Existence at: ,1707388738143
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738143
+Finish Checking Filter Existence at: ,1707388738144
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738144
+Finish Checking Filter Existence at: ,1707388738145
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738146
+Finish Checking Filter Existence at: ,1707388738147
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738147
+Finish Checking Filter Existence at: ,1707388738148
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738148
+Finish Checking Filter Existence at: ,1707388738149
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738149
+Finish Checking Filter Existence at: ,1707388738150
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738150
+Finish Checking Filter Existence at: ,1707388738151
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738151
+Finish Checking Filter Existence at: ,1707388738152
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738152
+Finish Checking Filter Existence at: ,1707388738153
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738153
+Finish Checking Filter Existence at: ,1707388738154
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738154
+Finish Checking Filter Existence at: ,1707388738155
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738156
+Finish Checking Filter Existence at: ,1707388738157
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738157
+Finish Checking Filter Existence at: ,1707388738158
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738158
+Finish Checking Filter Existence at: ,1707388738159
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738159
+Finish Checking Filter Existence at: ,1707388738160
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738160
+Finish Checking Filter Existence at: ,1707388738162
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738162
+Finish Checking Filter Existence at: ,1707388738163
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738163
+Finish Checking Filter Existence at: ,1707388738164
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738164
+Finish Checking Filter Existence at: ,1707388738165
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738165
+Finish Checking Filter Existence at: ,1707388738166
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738166
+Finish Checking Filter Existence at: ,1707388738167
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738167
+Finish Checking Filter Existence at: ,1707388738168
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738168
+Finish Checking Filter Existence at: ,1707388738170
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738170
+Finish Checking Filter Existence at: ,1707388738171
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738171
+Finish Checking Filter Existence at: ,1707388738172
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738172
+Finish Checking Filter Existence at: ,1707388738173
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738174
+Finish Checking Filter Existence at: ,1707388738175
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738175
+Finish Checking Filter Existence at: ,1707388738176
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738176
+Finish Checking Filter Existence at: ,1707388738177
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738177
+Finish Checking Filter Existence at: ,1707388738178
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738178
+Finish Checking Filter Existence at: ,1707388738180
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738180
+Finish Checking Filter Existence at: ,1707388738181
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738181
+Finish Checking Filter Existence at: ,1707388738182
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738182
+Finish Checking Filter Existence at: ,1707388738183
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738183
+Finish Checking Filter Existence at: ,1707388738184
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738184
+Finish Checking Filter Existence at: ,1707388738185
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738185
+Finish Checking Filter Existence at: ,1707388738186
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738186
+Finish Checking Filter Existence at: ,1707388738187
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738187
+Finish Checking Filter Existence at: ,1707388738188
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738188
+Finish Checking Filter Existence at: ,1707388738190
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738190
+Finish Checking Filter Existence at: ,1707388738191
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738191
+Finish Checking Filter Existence at: ,1707388738192
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738192
+Finish Checking Filter Existence at: ,1707388738194
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738194
+Finish Checking Filter Existence at: ,1707388738195
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738195
+Finish Checking Filter Existence at: ,1707388738196
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738196
+Finish Checking Filter Existence at: ,1707388738197
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738197
+Finish Checking Filter Existence at: ,1707388738198
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738198
+Finish Checking Filter Existence at: ,1707388738199
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738199
+Finish Checking Filter Existence at: ,1707388738200
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738200
+Finish Checking Filter Existence at: ,1707388738201
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738201
+Finish Checking Filter Existence at: ,1707388738202
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738202
+Finish Checking Filter Existence at: ,1707388738204
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738204
+Finish Checking Filter Existence at: ,1707388738205
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738205
+Finish Checking Filter Existence at: ,1707388738207
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738207
+Finish Checking Filter Existence at: ,1707388738208
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738208
+Finish Checking Filter Existence at: ,1707388738209
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738209
+Finish Checking Filter Existence at: ,1707388738210
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738210
+Finish Checking Filter Existence at: ,1707388738212
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738212
+Finish Checking Filter Existence at: ,1707388738213
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738213
+Finish Checking Filter Existence at: ,1707388738214
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738214
+Finish Checking Filter Existence at: ,1707388738215
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738215
+Finish Checking Filter Existence at: ,1707388738216
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738216
+Finish Checking Filter Existence at: ,1707388738217
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738217
+Finish Checking Filter Existence at: ,1707388738218
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738219
+Finish Checking Filter Existence at: ,1707388738220
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738220
+Finish Checking Filter Existence at: ,1707388738221
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738221
+Finish Checking Filter Existence at: ,1707388738222
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738222
+Finish Checking Filter Existence at: ,1707388738223
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738223
+Finish Checking Filter Existence at: ,1707388738225
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738225
+Finish Checking Filter Existence at: ,1707388738226
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738226
+Finish Checking Filter Existence at: ,1707388738227
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738227
+Finish Checking Filter Existence at: ,1707388738228
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738228
+Finish Checking Filter Existence at: ,1707388738229
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738229
+Finish Checking Filter Existence at: ,1707388738230
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738230
+Finish Checking Filter Existence at: ,1707388738231
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738231
+Finish Checking Filter Existence at: ,1707388738232
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738232
+Finish Checking Filter Existence at: ,1707388738233
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738233
+Finish Checking Filter Existence at: ,1707388738234
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738234
+Finish Checking Filter Existence at: ,1707388738235
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738235
+Finish Checking Filter Existence at: ,1707388738236
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738236
+Finish Checking Filter Existence at: ,1707388738237
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738237
+Finish Checking Filter Existence at: ,1707388738239
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738239
+Finish Checking Filter Existence at: ,1707388738240
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738240
+Finish Checking Filter Existence at: ,1707388738241
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738241
+Finish Checking Filter Existence at: ,1707388738243
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738243
+Finish Checking Filter Existence at: ,1707388738244
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738244
+Finish Checking Filter Existence at: ,1707388738245
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738245
+Finish Checking Filter Existence at: ,1707388738246
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738247
+Finish Checking Filter Existence at: ,1707388738248
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738248
+Finish Checking Filter Existence at: ,1707388738249
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738249
+Finish Checking Filter Existence at: ,1707388738250
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738250
+Finish Checking Filter Existence at: ,1707388738251
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738251
+Finish Checking Filter Existence at: ,1707388738252
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738252
+Finish Checking Filter Existence at: ,1707388738253
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738253
+Finish Checking Filter Existence at: ,1707388738254
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738254
+Finish Checking Filter Existence at: ,1707388738255
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738255
+Finish Checking Filter Existence at: ,1707388738257
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738257
+Finish Checking Filter Existence at: ,1707388738258
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738258
+Finish Checking Filter Existence at: ,1707388738260
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738260
+Finish Checking Filter Existence at: ,1707388738262
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738263
+Finish Checking Filter Existence at: ,1707388738264
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738264
+Finish Checking Filter Existence at: ,1707388738266
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738266
+Finish Checking Filter Existence at: ,1707388738267
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738267
+Finish Checking Filter Existence at: ,1707388738268
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738268
+Finish Checking Filter Existence at: ,1707388738269
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738269
+Finish Checking Filter Existence at: ,1707388738270
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738271
+Finish Checking Filter Existence at: ,1707388738272
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738272
+Finish Checking Filter Existence at: ,1707388738273
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738273
+Finish Checking Filter Existence at: ,1707388738275
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738275
+Finish Checking Filter Existence at: ,1707388738276
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738276
+Finish Checking Filter Existence at: ,1707388738278
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738278
+Finish Checking Filter Existence at: ,1707388738279
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738279
+Finish Checking Filter Existence at: ,1707388738280
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738280
+Finish Checking Filter Existence at: ,1707388738281
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738281
+Finish Checking Filter Existence at: ,1707388738282
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738282
+Finish Checking Filter Existence at: ,1707388738284
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738284
+Finish Checking Filter Existence at: ,1707388738285
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738285
+Finish Checking Filter Existence at: ,1707388738286
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738286
+Finish Checking Filter Existence at: ,1707388738287
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738287
+Finish Checking Filter Existence at: ,1707388738288
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738288
+Finish Checking Filter Existence at: ,1707388738289
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738289
+Finish Checking Filter Existence at: ,1707388738290
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738291
+Finish Checking Filter Existence at: ,1707388738292
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738292
+Finish Checking Filter Existence at: ,1707388738293
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738293
+Finish Checking Filter Existence at: ,1707388738294
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738294
+Finish Checking Filter Existence at: ,1707388738295
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738295
+Finish Checking Filter Existence at: ,1707388738296
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738296
+Finish Checking Filter Existence at: ,1707388738297
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738297
+Finish Checking Filter Existence at: ,1707388738299
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738299
+Finish Checking Filter Existence at: ,1707388738300
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738300
+Finish Checking Filter Existence at: ,1707388738301
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738301
+Finish Checking Filter Existence at: ,1707388738302
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738302
+Finish Checking Filter Existence at: ,1707388738303
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738303
+Finish Checking Filter Existence at: ,1707388738304
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738304
+Finish Checking Filter Existence at: ,1707388738305
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738305
+Finish Checking Filter Existence at: ,1707388738306
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738306
+Finish Checking Filter Existence at: ,1707388738307
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738307
+Finish Checking Filter Existence at: ,1707388738309
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738309
+Finish Checking Filter Existence at: ,1707388738310
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738310
+Finish Checking Filter Existence at: ,1707388738311
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738311
+Finish Checking Filter Existence at: ,1707388738318
+Checking Latency is,7
+Start to Check Filter Existence for the Late Publisher at,1707388738318
+Finish Checking Filter Existence at: ,1707388738319
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738320
+Finish Checking Filter Existence at: ,1707388738321
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738321
+Finish Checking Filter Existence at: ,1707388738322
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738322
+Finish Checking Filter Existence at: ,1707388738324
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738324
+Finish Checking Filter Existence at: ,1707388738325
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738325
+Finish Checking Filter Existence at: ,1707388738326
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738326
+Finish Checking Filter Existence at: ,1707388738327
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738327
+Finish Checking Filter Existence at: ,1707388738328
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738328
+Finish Checking Filter Existence at: ,1707388738329
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738329
+Finish Checking Filter Existence at: ,1707388738330
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738330
+Finish Checking Filter Existence at: ,1707388738331
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738331
+Finish Checking Filter Existence at: ,1707388738332
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738332
+Finish Checking Filter Existence at: ,1707388738333
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738333
+Finish Checking Filter Existence at: ,1707388738334
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738334
+Finish Checking Filter Existence at: ,1707388738335
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738336
+Finish Checking Filter Existence at: ,1707388738336
+Checking Latency is,0
+Start to Check Filter Existence for the Late Publisher at,1707388738337
+Finish Checking Filter Existence at: ,1707388738338
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738338
+Finish Checking Filter Existence at: ,1707388738339
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738339
+Finish Checking Filter Existence at: ,1707388738340
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738340
+Finish Checking Filter Existence at: ,1707388738341
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738341
+Finish Checking Filter Existence at: ,1707388738342
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738342
+Finish Checking Filter Existence at: ,1707388738343
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738344
+Finish Checking Filter Existence at: ,1707388738345
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738345
+Finish Checking Filter Existence at: ,1707388738346
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738346
+Finish Checking Filter Existence at: ,1707388738347
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738347
+Finish Checking Filter Existence at: ,1707388738348
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738348
+Finish Checking Filter Existence at: ,1707388738349
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738349
+Finish Checking Filter Existence at: ,1707388738351
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738351
+Finish Checking Filter Existence at: ,1707388738352
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738352
+Finish Checking Filter Existence at: ,1707388738353
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738353
+Finish Checking Filter Existence at: ,1707388738354
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738354
+Finish Checking Filter Existence at: ,1707388738355
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738355
+Finish Checking Filter Existence at: ,1707388738357
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738357
+Finish Checking Filter Existence at: ,1707388738358
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738358
+Finish Checking Filter Existence at: ,1707388738359
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738359
+Finish Checking Filter Existence at: ,1707388738360
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738360
+Finish Checking Filter Existence at: ,1707388738361
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738361
+Finish Checking Filter Existence at: ,1707388738362
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738362
+Finish Checking Filter Existence at: ,1707388738363
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738363
+Finish Checking Filter Existence at: ,1707388738364
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738364
+Finish Checking Filter Existence at: ,1707388738365
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738365
+Finish Checking Filter Existence at: ,1707388738366
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738366
+Finish Checking Filter Existence at: ,1707388738367
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738367
+Finish Checking Filter Existence at: ,1707388738368
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738368
+Finish Checking Filter Existence at: ,1707388738369
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738369
+Finish Checking Filter Existence at: ,1707388738370
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738370
+Finish Checking Filter Existence at: ,1707388738371
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738371
+Finish Checking Filter Existence at: ,1707388738372
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738372
+Finish Checking Filter Existence at: ,1707388738374
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738374
+Finish Checking Filter Existence at: ,1707388738375
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738375
+Finish Checking Filter Existence at: ,1707388738376
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738376
+Finish Checking Filter Existence at: ,1707388738377
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738377
+Finish Checking Filter Existence at: ,1707388738379
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738379
+Finish Checking Filter Existence at: ,1707388738380
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738380
+Finish Checking Filter Existence at: ,1707388738381
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738381
+Finish Checking Filter Existence at: ,1707388738383
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738383
+Finish Checking Filter Existence at: ,1707388738384
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738384
+Finish Checking Filter Existence at: ,1707388738385
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738385
+Finish Checking Filter Existence at: ,1707388738386
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738386
+Finish Checking Filter Existence at: ,1707388738387
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738387
+Finish Checking Filter Existence at: ,1707388738388
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738388
+Finish Checking Filter Existence at: ,1707388738389
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738390
+Finish Checking Filter Existence at: ,1707388738391
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738391
+Finish Checking Filter Existence at: ,1707388738392
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738392
+Finish Checking Filter Existence at: ,1707388738393
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738393
+Finish Checking Filter Existence at: ,1707388738394
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738394
+Finish Checking Filter Existence at: ,1707388738395
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738395
+Finish Checking Filter Existence at: ,1707388738396
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738396
+Finish Checking Filter Existence at: ,1707388738397
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738397
+Finish Checking Filter Existence at: ,1707388738398
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738398
+Finish Checking Filter Existence at: ,1707388738399
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738399
+Finish Checking Filter Existence at: ,1707388738401
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738405
+Finish Checking Filter Existence at: ,1707388738406
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738406
+Finish Checking Filter Existence at: ,1707388738407
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738407
+Finish Checking Filter Existence at: ,1707388738408
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738409
+Finish Checking Filter Existence at: ,1707388738410
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738410
+Finish Checking Filter Existence at: ,1707388738411
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738411
+Finish Checking Filter Existence at: ,1707388738412
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738412
+Finish Checking Filter Existence at: ,1707388738413
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738413
+Finish Checking Filter Existence at: ,1707388738414
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738414
+Finish Checking Filter Existence at: ,1707388738416
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738416
+Finish Checking Filter Existence at: ,1707388738417
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738417
+Finish Checking Filter Existence at: ,1707388738418
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738418
+Finish Checking Filter Existence at: ,1707388738419
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738419
+Finish Checking Filter Existence at: ,1707388738420
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738420
+Finish Checking Filter Existence at: ,1707388738422
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738423
+Finish Checking Filter Existence at: ,1707388738425
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738425
+Finish Checking Filter Existence at: ,1707388738426
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738426
+Finish Checking Filter Existence at: ,1707388738427
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738427
+Finish Checking Filter Existence at: ,1707388738429
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738429
+Finish Checking Filter Existence at: ,1707388738430
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738430
+Finish Checking Filter Existence at: ,1707388738431
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738431
+Finish Checking Filter Existence at: ,1707388738432
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738432
+Finish Checking Filter Existence at: ,1707388738433
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738433
+Finish Checking Filter Existence at: ,1707388738434
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738434
+Finish Checking Filter Existence at: ,1707388738435
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738435
+Finish Checking Filter Existence at: ,1707388738437
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738437
+Finish Checking Filter Existence at: ,1707388738438
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738438
+Finish Checking Filter Existence at: ,1707388738439
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738439
+Finish Checking Filter Existence at: ,1707388738441
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738441
+Finish Checking Filter Existence at: ,1707388738442
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738442
+Finish Checking Filter Existence at: ,1707388738443
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738443
+Finish Checking Filter Existence at: ,1707388738444
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738444
+Finish Checking Filter Existence at: ,1707388738445
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738445
+Finish Checking Filter Existence at: ,1707388738446
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738446
+Finish Checking Filter Existence at: ,1707388738447
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738447
+Finish Checking Filter Existence at: ,1707388738448
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738448
+Finish Checking Filter Existence at: ,1707388738449
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738449
+Finish Checking Filter Existence at: ,1707388738450
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738450
+Finish Checking Filter Existence at: ,1707388738451
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738452
+Finish Checking Filter Existence at: ,1707388738453
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738453
+Finish Checking Filter Existence at: ,1707388738454
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738454
+Finish Checking Filter Existence at: ,1707388738455
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738455
+Finish Checking Filter Existence at: ,1707388738456
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738456
+Finish Checking Filter Existence at: ,1707388738457
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738457
+Finish Checking Filter Existence at: ,1707388738458
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738458
+Finish Checking Filter Existence at: ,1707388738459
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738459
+Finish Checking Filter Existence at: ,1707388738461
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738461
+Finish Checking Filter Existence at: ,1707388738462
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738462
+Finish Checking Filter Existence at: ,1707388738463
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738463
+Finish Checking Filter Existence at: ,1707388738464
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738464
+Finish Checking Filter Existence at: ,1707388738465
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738465
+Finish Checking Filter Existence at: ,1707388738466
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738466
+Finish Checking Filter Existence at: ,1707388738467
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738467
+Finish Checking Filter Existence at: ,1707388738469
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738469
+Finish Checking Filter Existence at: ,1707388738470
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738470
+Finish Checking Filter Existence at: ,1707388738471
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738471
+Finish Checking Filter Existence at: ,1707388738472
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738472
+Finish Checking Filter Existence at: ,1707388738473
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738473
+Finish Checking Filter Existence at: ,1707388738474
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738474
+Finish Checking Filter Existence at: ,1707388738475
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738475
+Finish Checking Filter Existence at: ,1707388738476
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738476
+Finish Checking Filter Existence at: ,1707388738478
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738478
+Finish Checking Filter Existence at: ,1707388738479
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738479
+Finish Checking Filter Existence at: ,1707388738480
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738480
+Finish Checking Filter Existence at: ,1707388738481
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738481
+Finish Checking Filter Existence at: ,1707388738482
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738482
+Finish Checking Filter Existence at: ,1707388738483
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738483
+Finish Checking Filter Existence at: ,1707388738484
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738484
+Finish Checking Filter Existence at: ,1707388738485
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738485
+Finish Checking Filter Existence at: ,1707388738486
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738486
+Finish Checking Filter Existence at: ,1707388738487
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738487
+Finish Checking Filter Existence at: ,1707388738488
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738488
+Finish Checking Filter Existence at: ,1707388738489
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738489
+Finish Checking Filter Existence at: ,1707388738491
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738491
+Finish Checking Filter Existence at: ,1707388738492
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738492
+Finish Checking Filter Existence at: ,1707388738493
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738493
+Finish Checking Filter Existence at: ,1707388738494
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738494
+Finish Checking Filter Existence at: ,1707388738495
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738495
+Finish Checking Filter Existence at: ,1707388738496
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738496
+Finish Checking Filter Existence at: ,1707388738497
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738497
+Finish Checking Filter Existence at: ,1707388738498
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738498
+Finish Checking Filter Existence at: ,1707388738500
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738500
+Finish Checking Filter Existence at: ,1707388738501
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738501
+Finish Checking Filter Existence at: ,1707388738502
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738502
+Finish Checking Filter Existence at: ,1707388738503
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738503
+Finish Checking Filter Existence at: ,1707388738504
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738504
+Finish Checking Filter Existence at: ,1707388738505
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738505
+Finish Checking Filter Existence at: ,1707388738506
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738506
+Finish Checking Filter Existence at: ,1707388738507
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738507
+Finish Checking Filter Existence at: ,1707388738508
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738509
+Finish Checking Filter Existence at: ,1707388738510
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738510
+Finish Checking Filter Existence at: ,1707388738511
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738511
+Finish Checking Filter Existence at: ,1707388738512
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738512
+Finish Checking Filter Existence at: ,1707388738513
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738513
+Finish Checking Filter Existence at: ,1707388738514
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738514
+Finish Checking Filter Existence at: ,1707388738515
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738515
+Finish Checking Filter Existence at: ,1707388738517
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738517
+Finish Checking Filter Existence at: ,1707388738518
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738518
+Finish Checking Filter Existence at: ,1707388738519
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738519
+Finish Checking Filter Existence at: ,1707388738520
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738520
+Finish Checking Filter Existence at: ,1707388738521
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738521
+Finish Checking Filter Existence at: ,1707388738523
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738523
+Finish Checking Filter Existence at: ,1707388738524
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738524
+Finish Checking Filter Existence at: ,1707388738525
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738525
+Finish Checking Filter Existence at: ,1707388738526
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738526
+Finish Checking Filter Existence at: ,1707388738528
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738528
+Finish Checking Filter Existence at: ,1707388738529
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738529
+Finish Checking Filter Existence at: ,1707388738530
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738530
+Finish Checking Filter Existence at: ,1707388738531
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738531
+Finish Checking Filter Existence at: ,1707388738532
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738532
+Finish Checking Filter Existence at: ,1707388738533
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738533
+Finish Checking Filter Existence at: ,1707388738535
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738535
+Finish Checking Filter Existence at: ,1707388738536
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738536
+Finish Checking Filter Existence at: ,1707388738537
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738537
+Finish Checking Filter Existence at: ,1707388738538
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738538
+Finish Checking Filter Existence at: ,1707388738539
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738539
+Finish Checking Filter Existence at: ,1707388738541
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738541
+Finish Checking Filter Existence at: ,1707388738542
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738542
+Finish Checking Filter Existence at: ,1707388738543
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738543
+Finish Checking Filter Existence at: ,1707388738544
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738544
+Finish Checking Filter Existence at: ,1707388738545
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738545
+Finish Checking Filter Existence at: ,1707388738546
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738546
+Finish Checking Filter Existence at: ,1707388738547
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738547
+Finish Checking Filter Existence at: ,1707388738548
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738548
+Finish Checking Filter Existence at: ,1707388738549
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738549
+Finish Checking Filter Existence at: ,1707388738550
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738550
+Finish Checking Filter Existence at: ,1707388738551
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738552
+Finish Checking Filter Existence at: ,1707388738553
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738553
+Finish Checking Filter Existence at: ,1707388738554
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738554
+Finish Checking Filter Existence at: ,1707388738555
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738555
+Finish Checking Filter Existence at: ,1707388738556
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738556
+Finish Checking Filter Existence at: ,1707388738557
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738557
+Finish Checking Filter Existence at: ,1707388738559
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738559
+Finish Checking Filter Existence at: ,1707388738560
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738560
+Finish Checking Filter Existence at: ,1707388738561
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738561
+Finish Checking Filter Existence at: ,1707388738562
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738562
+Finish Checking Filter Existence at: ,1707388738563
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738563
+Finish Checking Filter Existence at: ,1707388738564
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738564
+Finish Checking Filter Existence at: ,1707388738565
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738565
+Finish Checking Filter Existence at: ,1707388738566
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738566
+Finish Checking Filter Existence at: ,1707388738567
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738567
+Finish Checking Filter Existence at: ,1707388738568
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738568
+Finish Checking Filter Existence at: ,1707388738570
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738570
+Finish Checking Filter Existence at: ,1707388738571
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738571
+Finish Checking Filter Existence at: ,1707388738573
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738573
+Finish Checking Filter Existence at: ,1707388738575
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738575
+Finish Checking Filter Existence at: ,1707388738576
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738576
+Finish Checking Filter Existence at: ,1707388738577
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738577
+Finish Checking Filter Existence at: ,1707388738578
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738578
+Finish Checking Filter Existence at: ,1707388738579
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738579
+Finish Checking Filter Existence at: ,1707388738580
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738580
+Finish Checking Filter Existence at: ,1707388738582
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738582
+Finish Checking Filter Existence at: ,1707388738583
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738583
+Finish Checking Filter Existence at: ,1707388738584
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738584
+Finish Checking Filter Existence at: ,1707388738585
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738585
+Finish Checking Filter Existence at: ,1707388738586
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738586
+Finish Checking Filter Existence at: ,1707388738587
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738587
+Finish Checking Filter Existence at: ,1707388738588
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738588
+Finish Checking Filter Existence at: ,1707388738589
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738589
+Finish Checking Filter Existence at: ,1707388738591
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738591
+Finish Checking Filter Existence at: ,1707388738592
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738592
+Finish Checking Filter Existence at: ,1707388738593
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738593
+Finish Checking Filter Existence at: ,1707388738595
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738595
+Finish Checking Filter Existence at: ,1707388738596
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738596
+Finish Checking Filter Existence at: ,1707388738597
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738597
+Finish Checking Filter Existence at: ,1707388738598
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738598
+Finish Checking Filter Existence at: ,1707388738599
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738599
+Finish Checking Filter Existence at: ,1707388738600
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738600
+Finish Checking Filter Existence at: ,1707388738601
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738601
+Finish Checking Filter Existence at: ,1707388738602
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738602
+Finish Checking Filter Existence at: ,1707388738603
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738603
+Finish Checking Filter Existence at: ,1707388738604
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738604
+Finish Checking Filter Existence at: ,1707388738606
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738606
+Finish Checking Filter Existence at: ,1707388738607
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738607
+Finish Checking Filter Existence at: ,1707388738608
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738608
+Finish Checking Filter Existence at: ,1707388738609
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738609
+Finish Checking Filter Existence at: ,1707388738610
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738610
+Finish Checking Filter Existence at: ,1707388738611
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738611
+Finish Checking Filter Existence at: ,1707388738612
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738612
+Finish Checking Filter Existence at: ,1707388738613
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738613
+Finish Checking Filter Existence at: ,1707388738614
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738614
+Finish Checking Filter Existence at: ,1707388738615
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738615
+Finish Checking Filter Existence at: ,1707388738616
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738616
+Finish Checking Filter Existence at: ,1707388738617
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738617
+Finish Checking Filter Existence at: ,1707388738619
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738619
+Finish Checking Filter Existence at: ,1707388738620
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738620
+Finish Checking Filter Existence at: ,1707388738621
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738621
+Finish Checking Filter Existence at: ,1707388738622
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738622
+Finish Checking Filter Existence at: ,1707388738623
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738623
+Finish Checking Filter Existence at: ,1707388738624
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738624
+Finish Checking Filter Existence at: ,1707388738625
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738625
+Finish Checking Filter Existence at: ,1707388738626
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738626
+Finish Checking Filter Existence at: ,1707388738627
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738627
+Finish Checking Filter Existence at: ,1707388738629
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738629
+Finish Checking Filter Existence at: ,1707388738630
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738630
+Finish Checking Filter Existence at: ,1707388738631
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738631
+Finish Checking Filter Existence at: ,1707388738632
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738632
+Finish Checking Filter Existence at: ,1707388738633
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738633
+Finish Checking Filter Existence at: ,1707388738636
+Checking Latency is,3
+Start to Check Filter Existence for the Late Publisher at,1707388738636
+Finish Checking Filter Existence at: ,1707388738637
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738637
+Finish Checking Filter Existence at: ,1707388738638
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738638
+Finish Checking Filter Existence at: ,1707388738639
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738639
+Finish Checking Filter Existence at: ,1707388738641
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738641
+Finish Checking Filter Existence at: ,1707388738642
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738642
+Finish Checking Filter Existence at: ,1707388738643
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738643
+Finish Checking Filter Existence at: ,1707388738644
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738644
+Finish Checking Filter Existence at: ,1707388738645
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738645
+Finish Checking Filter Existence at: ,1707388738646
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738646
+Finish Checking Filter Existence at: ,1707388738647
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738647
+Finish Checking Filter Existence at: ,1707388738648
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738648
+Finish Checking Filter Existence at: ,1707388738649
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738649
+Finish Checking Filter Existence at: ,1707388738650
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738650
+Finish Checking Filter Existence at: ,1707388738651
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738651
+Finish Checking Filter Existence at: ,1707388738652
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738652
+Finish Checking Filter Existence at: ,1707388738654
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738654
+Finish Checking Filter Existence at: ,1707388738655
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738655
+Finish Checking Filter Existence at: ,1707388738657
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738657
+Finish Checking Filter Existence at: ,1707388738658
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738658
+Finish Checking Filter Existence at: ,1707388738659
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738659
+Finish Checking Filter Existence at: ,1707388738660
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738660
+Finish Checking Filter Existence at: ,1707388738661
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738661
+Finish Checking Filter Existence at: ,1707388738662
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738662
+Finish Checking Filter Existence at: ,1707388738664
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738664
+Finish Checking Filter Existence at: ,1707388738665
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738665
+Finish Checking Filter Existence at: ,1707388738666
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738666
+Finish Checking Filter Existence at: ,1707388738667
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738667
+Finish Checking Filter Existence at: ,1707388738668
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738668
+Finish Checking Filter Existence at: ,1707388738670
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738670
+Finish Checking Filter Existence at: ,1707388738671
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738671
+Finish Checking Filter Existence at: ,1707388738672
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738672
+Finish Checking Filter Existence at: ,1707388738673
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738673
+Finish Checking Filter Existence at: ,1707388738674
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738674
+Finish Checking Filter Existence at: ,1707388738675
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738675
+Finish Checking Filter Existence at: ,1707388738677
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738677
+Finish Checking Filter Existence at: ,1707388738678
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738678
+Finish Checking Filter Existence at: ,1707388738679
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738679
+Finish Checking Filter Existence at: ,1707388738680
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738680
+Finish Checking Filter Existence at: ,1707388738681
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738681
+Finish Checking Filter Existence at: ,1707388738682
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738682
+Finish Checking Filter Existence at: ,1707388738683
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738683
+Finish Checking Filter Existence at: ,1707388738684
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738684
+Finish Checking Filter Existence at: ,1707388738685
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738685
+Finish Checking Filter Existence at: ,1707388738686
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738686
+Finish Checking Filter Existence at: ,1707388738687
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738687
+Finish Checking Filter Existence at: ,1707388738688
+Checking Latency is,1
+Start to Check Filter Existence for the Late Publisher at,1707388738688
+Finish Checking Filter Existence at: ,1707388738690
+Checking Latency is,2
+Start to Check Filter Existence for the Late Publisher at,1707388738690
+Finish Checking Filter Existence at: ,1707388738691
+Checking Latency is,1
+Finish New Publisher Related Operations at,1707388738696
+New Client Arrived at,1707388768626
+Finish New Publisher Related Operations at,1707388768644
+New Client Arrived at,1707388768751
+Finish New Publisher Related Operations at,1707388768811
+New Client Arrived at,1707388768913
+Finish New Publisher Related Operations at,1707388768918

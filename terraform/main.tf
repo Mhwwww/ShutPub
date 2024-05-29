@@ -7,14 +7,20 @@ terraform {
   }
 }
 
+#provider "google" {
+#  project = "schirmer-project"
+#  region = "europe-west3"
+#  zone = "europe-west3-a"
+#
+#  credentials = file(var.key_file_location)
+#}
 provider "google" {
-  project = "schirmer-project"
+  project = "silent-scanner-413710"
   region = "europe-west3"
   zone = "europe-west3-a"
 
   credentials = file(var.key_file_location)
 }
-
 
 #create a Virtual Private Cloud (VPC) network and subnet for the VM's network interface.
 resource "google_compute_network" "vpc_network" {
@@ -23,11 +29,19 @@ resource "google_compute_network" "vpc_network" {
 }
 
 // BrokerBaseline VM Config--in frankfurt
-resource "google_compute_subnetwork" "broker" {
+resource "google_compute_subnetwork" "default" {
   name          = "psf-broker-subnetwork"
   ip_cidr_range = "10.1.2.0/24"
   network       = google_compute_network.vpc_network.id
+
+#  log_config {
+#    aggregation_interval = "INTERVAL_1_MIN"#    INTERVAL_5_SEC. Possible values are: INTERVAL_5_SEC, INTERVAL_30_SEC, INTERVAL_1_MIN, INTERVAL_5_MIN, INTERVAL_10_MIN, INTERVAL_15_MIN.
+#    flow_sampling        = 1.0
+#    metadata             = "INCLUDE_ALL_METADATA"
+#  }
 }
+
+
 resource "google_compute_instance" "broker" {
   name         = "psf-broker-vm"
   machine_type = "e2-standard-2"
@@ -45,7 +59,7 @@ resource "google_compute_instance" "broker" {
   }
 
   network_interface {
-    subnetwork = google_compute_subnetwork.broker.id
+    subnetwork = google_compute_subnetwork.default.id
     access_config {
       # Include this section to give the VM an external IP address
     }
@@ -76,7 +90,7 @@ resource "google_compute_instance" "publisher" {
   }
 
   network_interface {
-    subnetwork = google_compute_subnetwork.broker.id
+    subnetwork = google_compute_subnetwork.default.id
     access_config {
       # Include this section to give the VM an external IP address
     }
@@ -106,12 +120,10 @@ resource "google_compute_instance" "subscriber" {
 
   metadata = {
     ssh-keys = "debian:${file(var.gce_ssh_pub_key_file)}"
-
-
   }
 
   network_interface {
-    subnetwork = google_compute_subnetwork.broker.id
+    subnetwork = google_compute_subnetwork.default.id
     access_config {
       # Include this section to give the VM an external IP address
     }

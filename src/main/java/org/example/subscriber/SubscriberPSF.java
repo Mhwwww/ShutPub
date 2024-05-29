@@ -25,7 +25,6 @@ public class SubscriberPSF {
             connection = activeMQConnectionFactory.createConnection();
             String sub_name = name + "_sub_"+ j;
             connection.setClientID(sub_name);
-
             session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
             Destination destination = session.createTopic(dest);
@@ -33,8 +32,10 @@ public class SubscriberPSF {
             connection.start();
 
             String selector = selectors.get(j);
-             MessageConsumer messageConsumer = session.createConsumer(destination, selector, false);
-             msgThread(messageConsumer, sub_name, session, connection);
+            MessageConsumer messageConsumer = session.createConsumer(destination, selector, false);
+
+//           MessageConsumer messageConsumer = session.createConsumer(destination, "messageContent='A'", false);//for network experiment
+            msgThread(messageConsumer, sub_name, session, connection);
 
             } catch (InterruptedException e) {
             throw new RuntimeException(e);
@@ -68,7 +69,7 @@ public class SubscriberPSF {
     private static Thread createMessageConsumerThread(MessageConsumer messageConsumer, String name, Session session, Connection connection) {
         return new Thread(() -> {
             try {
-                System.out.println(name + " will only receive messages that match the selector: " + messageConsumer.getMessageSelector() + "***************");
+                System.out.println(name + " will only receive messages that match the selector: " + messageConsumer.getMessageSelector());
                 while (true) {
                     TextMessage messageReceived = (TextMessage) messageConsumer.receive();
                     if (messageReceived == null) {

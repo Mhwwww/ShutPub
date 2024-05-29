@@ -11,7 +11,6 @@ public class EvaFilterNumPSFSubscriber {
     static List<String> selectors = new ArrayList<>();
     static List<String> destinations = new ArrayList<>();
 
-
     public static void main(String[] args) throws InterruptedException {
 
         generateSelectors();

@@ -3,6 +3,7 @@ package org.example.publisher;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.artemis.api.core.QueueConfiguration;
 import org.apache.activemq.broker.BrokerService;
+import org.example.MetricsCollector;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +15,8 @@ import static org.example.cong.Configuration.*;
 public class PublisherBaseline
 {
     private static final Logger logger = LoggerFactory.getLogger(BrokerService.class);
+    private static MetricsCollector metricsCollector = new MetricsCollector();
+
     public static void baselinePublisher( String brokerUrl, String dest, String name ) {
         Connection connection = null;
         Session session = null;
@@ -34,59 +37,38 @@ public class PublisherBaseline
 
             for (int i = 1; i < MESSAGE_NUM+1; i++) {
                 long startTime = System.currentTimeMillis();
-                sendTextMsg(session, connection, messageProducer, "someID",i);
-                sendTextMsg(session, connection, messageProducer, "noID",i);
-                sendTextMsg(session, connection, messageProducer, "randomID",i);
-                sendTextMsg(session, connection, messageProducer, "abcdefg",i);
-                sendTextMsg(session, connection, messageProducer, "noID",i);
-                sendTextMsg(session, connection, messageProducer, "randomID",i);
-                sendTextMsg(session, connection, messageProducer, "abcdefg",i);
-                sendTextMsg(session, connection, messageProducer, "noID",i);
-                sendTextMsg(session, connection, messageProducer, "randomID",i);
-                sendTextMsg(session, connection, messageProducer, "abcdefg",i);
+//                sendTextMsg(session, connection, messageProducer, "someID",i);
+//                sendTextMsg(session, connection, messageProducer, "noID",i);
+//                sendTextMsg(session, connection, messageProducer, "randomID",i);
+//                sendTextMsg(session, connection, messageProducer, "abcdefg",i);
+//                sendTextMsg(session, connection, messageProducer, "noID",i);
+//                sendTextMsg(session, connection, messageProducer, "randomID",i);
+//                sendTextMsg(session, connection, messageProducer, "abcdefg",i);
+//                sendTextMsg(session, connection, messageProducer, "noID",i);
+//                sendTextMsg(session, connection, messageProducer, "randomID",i);
+//                sendTextMsg(session, connection, messageProducer, "abcdefg",i);
+
+                sendTextMsg(session, connection, messageProducer, selectorArray[0],i);
+                sendTextMsg(session, connection, messageProducer, selectorArray[1],i);
+                sendTextMsg(session, connection, messageProducer, selectorArray[2],i);
+                sendTextMsg(session, connection, messageProducer, selectorArray[3],i);
+                sendTextMsg(session, connection, messageProducer, selectorArray[4],i);
 
                 long finishTime = System.currentTimeMillis();
-
                 long sendingTime = finishTime - startTime;
 
-                logger.error("Sending Duration: {}", sendingTime);
+//                logger.error("Sending Duration: {}", sendingTime);
                 long sleepTime = MESSAGE_INTERVAL;
                 if (sendingTime > MESSAGE_INTERVAL){
-                    logger.error("We want to set MESSAGE INTERVAL to be: {}, but the sending time {} is **LONGER** than the INTERVAL", MESSAGE_INTERVAL, sendingTime);
+//                    logger.error("We want to set MESSAGE INTERVAL to be: {}, but the sending time {} is **LONGER** than the INTERVAL", MESSAGE_INTERVAL, sendingTime);
                     sleepTime = sendingTime;
-                }else {
-                    //logger.info("Message Interval Could Be Applied");
                 }
+//                else {
+//                    //logger.info("Message Interval Could Be Applied");
+//                }
 
                 Thread.sleep(sleepTime);
             }
-
-//            for(int i=1; i<MESSAGE_NUM+1; i++){
-//                long startTime = System.currentTimeMillis();
-//
-//                String property = "someID";
-//                // using the same impl as PSF publisher will cause reasonable latency for every for loop.
-//                TextMessage message = session.createTextMessage(connection.getClientID() + " send: "+ property +" message " + i);
-//                message.setStringProperty("messageContent", property);
-//                message.setLongProperty("timeSent", System.currentTimeMillis());
-//
-//                messageProducer.send(message);
-//
-//                long finishTime = System.currentTimeMillis();
-//
-//                long sendingTime = finishTime - startTime;
-//
-//                logger.error("Sending Duration: {}", sendingTime);
-//                long sleepTime = MESSAGE_INTERVAL;
-//                if (sendingTime > MESSAGE_INTERVAL){
-//                    logger.error("We want to set MESSAGE INTERVAL to be: {}, but the sending time {} is **LONGER** than the INTERVAL", MESSAGE_INTERVAL, sendingTime);
-//                    sleepTime = sendingTime;
-//                }else {
-//                    logger.info("Message Interval Could Be Applied");
-//                }
-//
-//                Thread.sleep(sleepTime);
-//            }
 
         }catch (JMSException e){
             e.printStackTrace();;
@@ -117,7 +99,9 @@ public class PublisherBaseline
         message.setLongProperty("timeSent", System.currentTimeMillis());
 
         messageProducer.send(message);
-        logger.info("{} send message with property {}", connection.getClientID(), property);
+//        logger.info("{} send message with property {}", connection.getClientID(), property);
+        metricsCollector.logPlanMsg("Baseline sent Msg at ", System.currentTimeMillis(),"Msg Content is ", message.getText());
+
         //logger.info("{} send message: {} with property {}", connection.getClientID(), message.getText(), property);
         //mw.subToFilter(messageProducer, session, connection, message2);
         //mw.fiter(messageProducer, message);

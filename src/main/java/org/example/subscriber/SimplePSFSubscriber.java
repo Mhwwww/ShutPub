@@ -16,11 +16,14 @@ public class SimplePSFSubscriber {
                             .withinRange('0', 'z')
                             .filteredBy(Character::isLetterOrDigit)
                             .build();
+//
+//                    String destination = DESTINATION + generator.generate(3);
+//                    System.out.println(destination);
 
-                    String destination = DESTINATION + generator.generate(3);
-                    System.out.println(destination);
+//                    SubscriberPSF.subPSF(BROKER_URL, destination, name);
 
-                    SubscriberPSF.subPSF(BROKER_URL, destination, name);
+                    SubscriberPSF.subPSF(BROKER_URL, DESTINATION, name);
+
 
                 } catch (Exception e) {
                     throw new RuntimeException(e);

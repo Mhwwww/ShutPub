@@ -7,21 +7,30 @@ public class Configuration {
     public static String DESTINATION = "targetTopic";
 
     public  static int BROKER_INTERVAL = 100;
-    public static int PRODUCER_NUM = 100;
-    public static int MESSAGE_NUM = 10;
+    public static int PRODUCER_NUM = 1000;
+    public static int MESSAGE_NUM = 4000;
 
-    public  static int  PUB_WAIT_TIME = 1000;
-
+    public  static int PUB_WAIT_TIME = 20000;
     public  static int MESSAGE_INTERVAL = 2000;
     public  static int PRODUCER_INTERVAL = 0;
 
-    public static int CONSUMER_NUM = 20;
+    public static int CONSUMER_NUM = 1;
     public  static int CONSUMER_INTERVAL = 1000;
-    public static int FILTER_NUM = 3;
+    public static int FILTER_NUM = 1;
+
+    public static String PUB_SELECTORS = "B,C,D,E,F";
+    public static String[] selectorArray = PUB_SELECTORS.split(",");
 
 
     static {
         System.out.println("Hello from the Configuration init");
+
+        String selectors = System.getenv("PUB_SELECTORS");
+        if (selectors != null) {
+            PUB_SELECTORS = selectors;
+            selectorArray = PUB_SELECTORS.split(",");
+            System.out.println("Using non-default PUB_SELECTORS:" + selectors);
+        }
 
         String destination = System.getenv("PSF_DESTINATION");
         if (destination != null) {

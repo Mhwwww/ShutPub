@@ -21,7 +21,7 @@ public class SimplePSFPublisher {
             });
             publisherThread.start();
 
-            //Thread.sleep(PRODUCER_INTERVAL);
+//            Thread.sleep(PRODUCER_INTERVAL);
 
         }
     }

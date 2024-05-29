@@ -37,26 +37,35 @@ public class PublisherWithPSF {
             PsfMW mw = new PsfMW();
             mw.subToFilter(session, connection);
 //            mw.subToFilter(messageProducer, session, connection);
+
+            // set message selectors from environment parameter
             //TODO: make sure that every publisher could receive filter.
             Thread.sleep(PUB_WAIT_TIME);
 
             for (int i = 1; i < MESSAGE_NUM+1; i++) {
                 long startTime = System.currentTimeMillis();
-                sendTextMsg(session, connection, mw, messageProducer, "someID",i);
-                sendTextMsg(session, connection, mw, messageProducer, "noID",i);
-                sendTextMsg(session, connection, mw, messageProducer, "randomID",i);
-                sendTextMsg(session, connection, mw, messageProducer, "abcdefg",i);
-                sendTextMsg(session, connection, mw, messageProducer, "noID",i);
-                sendTextMsg(session, connection, mw, messageProducer, "randomID",i);
-                sendTextMsg(session, connection, mw, messageProducer, "abcdefg",i);
-                sendTextMsg(session, connection, mw, messageProducer, "noID",i);
-                sendTextMsg(session, connection, mw, messageProducer, "randomID",i);
-                sendTextMsg(session, connection, mw, messageProducer, "abcdefg",i);
-                long finishTime = System.currentTimeMillis();
+//                sendTextMsg(session, connection, mw, messageProducer, "someID",i);
+//                sendTextMsg(session, connection, mw, messageProducer, "noID",i);
+//                sendTextMsg(session, connection, mw, messageProducer, "randomID",i);
+//                sendTextMsg(session, connection, mw, messageProducer, "abcdefg",i);
+//                sendTextMsg(session, connection, mw, messageProducer, "noID",i);
+//                sendTextMsg(session, connection, mw, messageProducer, "randomID",i);
+//                sendTextMsg(session, connection, mw, messageProducer, "abcdefg",i);
+//                sendTextMsg(session, connection, mw, messageProducer, "noID",i);
+//                sendTextMsg(session, connection, mw, messageProducer, "randomID",i);
+//                sendTextMsg(session, connection, mw, messageProducer, "abcdefg",i);
+//
+//              msgs for monitoring network bandwidth between Publisher and Broker
+                sendTextMsg(session, connection, mw, messageProducer, selectorArray[0],i);
+                sendTextMsg(session, connection, mw, messageProducer, selectorArray[1],i);
+                sendTextMsg(session, connection, mw, messageProducer, selectorArray[2],i);
+                sendTextMsg(session, connection, mw, messageProducer, selectorArray[3],i);
+                sendTextMsg(session, connection, mw, messageProducer, selectorArray[4],i);
 
+                long finishTime = System.currentTimeMillis();
                 long sendingTime = finishTime - startTime;
 
-                logger.error("Sending Duration: {}", sendingTime);
+//                logger.error("Sending Duration: {}", sendingTime);
                 long sleepTime = MESSAGE_INTERVAL;
                 if (sendingTime > MESSAGE_INTERVAL){
                     logger.error("We want to set MESSAGE INTERVAL to be: {}, but the sending time {} is **LONGER** than the INTERVAL", MESSAGE_INTERVAL, sendingTime);

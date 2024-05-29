@@ -80,7 +80,7 @@ public class PsfMW {
 //            if (msg.propertyExists(property) && msg.getStringProperty(property).contains(constraints)) {// filter unmatched msgs
             if (msg.propertyExists("messageContent") && msg.getStringProperty("messageContent").contains(constraints)) {// filter unmatched msgs
 
-            producer.send(msg);
+                producer.send(msg);
                 //logger.info("Filtered Msg latency: {} ", System.currentTimeMillis()-msg.getLongProperty("timeSent"));
 
                 logger.info("Actual Sent Message is: {}, the latency is: {}, the message property is: {}, the currentThreshold is: {}", msg.getText(), System.currentTimeMillis() - msg.getLongProperty("timeSent"), msg.getStringProperty("messageContent"), currentSelector);
@@ -89,4 +89,3 @@ public class PsfMW {
         }
     }
 }
-
